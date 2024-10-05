@@ -129,7 +129,7 @@ export const navItems: NavItem[] = [
     label: 'Dashboard'
   },
   {
-    title: 'Job Results',
+    title: 'Reponsible Investments',
     href: '/dashboard/results',
     icon: 'kanban',
     label: 'results'

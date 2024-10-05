@@ -1,9 +1,7 @@
-import { AreaGraph } from '../../results/area-graph';
-import { BarGraph } from '../../results/bar-graph';
-import { PieGraph } from '../../results/pie-graph';
-import { CalendarDateRangePicker } from '@/components/date-range-picker';
+'use client';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import PageContainer from '@/components/layout/page-container';
-import { RecentSales } from '../../results/recent-sales';
 import { Button } from '@/components/ui/button';
 import { Slider } from "@/components/ui/slider";
 import { Input } from "@/components/ui/input";
@@ -23,21 +21,48 @@ import {
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Link from 'next/link';
+import QuantumLoader from '@/components/ui/quantum-loader';
 
 export default function OverViewPage() {
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
   const Icon = Icons.info;
+  const [esgScore, setEsgScore] = useState(33);
+  const [riskIndex, setRiskIndex] = useState(33);
+
+  const handleEsgChange = (value: number[]) => {
+    setEsgScore(value[0]);
+  };
+
+  const handleRiskChange = (value: number[]) => {
+    setRiskIndex(value[0]);
+  };
+
+  const handleOptimizeClick = () => {
+    setLoading(true); 
+    setTimeout(() => {
+      setLoading(false);
+      router.push('/dashboard/results');
+    }, 5000); // Adjust the delay as per your need
+  };
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gray-900">
+        <QuantumLoader />
+      </div>
+    );
+  }
 
   return (
     <PageContainer scrollable={true}>
       <div className="space-y-6">
-        {/* Header */}
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold tracking-tight">
-            Welcome back Q-ESG USER 👋
+            Welcome Back Q-Impact User 👋
           </h2>
         </div>
 
-        {/* Tabs Section */}
         <Tabs defaultValue="overview" className="space-y-6">
           <TabsList>
             <TabsTrigger value="overview">
@@ -50,12 +75,11 @@ export default function OverViewPage() {
 
           <TooltipProvider>
             <TabsContent value="overview" className="space-y-6">
-              {/* First Row - Funds Input */}
               <div className="grid gap-6">
                 <Card className="w-full">
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium">
-                      Desired Funds to Allocate (USD):
+                    <CardTitle className="text-sm font-medium flex items-center">
+                      Funds to Allocate (USD):
                       <Tooltip>
                         <TooltipTrigger>
                           <Icon className="ml-2 w-4 h-4" aria-label="Information icon" />
@@ -80,7 +104,6 @@ export default function OverViewPage() {
               </div>
 
               <div className="grid gap-6 md:grid-cols-2">
-                {/* ESG Impact Score Slider */}
                 <Card className="w-full">
                   <CardHeader className="pb-2">
                     <CardTitle className="text-sm font-medium flex items-center">
@@ -91,19 +114,40 @@ export default function OverViewPage() {
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>
-                            ESG score accounts for enterprise impact across
-                            environment, social, and governance.
+                            ESG score reflects the enterprise's impact across environment,
+                            social, and governance criteria. A higher score indicates a more
+                            positive ESG impact.
                           </p>
                         </TooltipContent>
                       </Tooltip>
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <Slider defaultValue={[33]} max={100} step={1} className="w-full" />
+                    <div className="flex items-center justify-between">
+                      <label htmlFor="esg-slider" className="text-xs font-medium text-gray-700">
+                        Minimal (0)
+                      </label>
+                      <span id="esg-score" className="text-sm font-bold text-teal-600">
+                        {esgScore} 
+                      </span>
+                      <label htmlFor="esg-slider" className="text-xs font-medium text-gray-700">
+                        Maximum (100)
+                      </label>
+                    </div>
+                    <Slider
+                      id="esg-slider"
+                      value={[esgScore]}
+                      max={100}
+                      step={1}
+                      className="w-full mt-2"
+                      onValueChange={(value: any) => setEsgScore(value)}
+                    />
+                    <p className="mt-2 text-xs text-gray-600">
+                      Adjust the ESG impact score to reflect the desired impact of the portfolio on environmental, social, and governance factors.
+                    </p>
                   </CardContent>
                 </Card>
 
-                {/* Risk Slider */}
                 <Card className="w-full">
                   <CardHeader className="pb-2">
                     <CardTitle className="text-sm font-medium flex items-center">
@@ -114,23 +158,43 @@ export default function OverViewPage() {
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>
-                            Risk index defines desired risk coefficient.
+                            The risk index represents the desired risk tolerance in the portfolio. A lower index indicates a more conservative approach, while a higher index indicates a higher tolerance for risk.
                           </p>
                         </TooltipContent>
                       </Tooltip>
-
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <Slider defaultValue={[33]} max={100} step={1} className="w-full" />
+                    <div className="flex items-center justify-between">
+                      <label htmlFor="risk-slider" className="text-xs font-medium text-gray-700">
+                        Low Risk (0)
+                      </label>
+                      <span id="risk-index" className="text-sm font-bold text-red-600">
+                        {riskIndex}
+                      </span>
+                      <label htmlFor="risk-slider" className="text-xs font-medium text-gray-700">
+                        High Risk (100)
+                      </label>
+                    </div>
+                    <Slider
+                      id="risk-slider"
+                      value={[riskIndex]}
+                      max={100}
+                      step={1}
+                      className="w-full mt-2"
+                      onValueChange={handleRiskChange}
+                    />
+                    <p className="mt-2 text-xs text-gray-600">
+                      Adjust the risk index to match your desired portfolio risk level. A higher value indicates a more aggressive risk profile.
+                    </p>
                   </CardContent>
                 </Card>
               </div>
 
-              {/* Third Row - Optimize Portfolio Button */}
               <div className="flex justify-center">
                 <Button
-                  className="px-8 py-3 rounded-md bg-teal-500 text-white font-bold transition duration-200 hover:bg-white hover:text-teal-500 border-2 border-transparent hover:border-teal-500"
+                  onClick={handleOptimizeClick}
+                  className="px-16 py-6 rounded-xl bg-teal-500 text-white text-2xl font-extrabold transition duration-200 hover:bg-white hover:text-teal-500 border-2 border-transparent hover:border-teal-500 w-full md:w-auto"
                   asChild
                 >
                   <Link href="/dashboard/results">Optimize Portfolio</Link>
@@ -141,104 +205,5 @@ export default function OverViewPage() {
         </Tabs>
       </div>
     </PageContainer>
-    // <PageContainer scrollable={true}>
-    //   <div className="space-y-4">
-    //     <div className="flex items-center justify-between space-y-2">
-    //       <h2 className="text-2xl font-bold tracking-tight">
-    //         Welcome back Q-ESG USER👋
-    //       </h2>
-    //     </div>
-    //     <Tabs defaultValue="overview" className="space-y-6">
-    //       <TabsList>
-    //         <TabsTrigger value="overview">Overview</TabsTrigger>
-    //         <TabsTrigger value="analytics" disabled>
-    //           Analytics
-    //         </TabsTrigger>
-    //       </TabsList>
-    //       <TooltipProvider>
-    //         <TabsContent value="overview" className="space-y-4">
-    //           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-    //             {/* <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4"></div> */}
-    //             <Card>
-    //               <CardHeader className="flex items-center justify-between pb-2">
-    //                 <CardTitle className="text-sm font-medium flex items-center">
-    //                   Desired Funds to Allocate (USD):
-    // <Tooltip>
-    //   <TooltipTrigger>
-    //     <Icon className="ml-2 w-4 h-4" aria-label="Information icon" />
-    //   </TooltipTrigger>
-    //   <TooltipContent>
-    //     <p>
-    //       Funds, in USD, allocated to portfolio optimzation.
-    //     </p>
-    //   </TooltipContent>
-    // </Tooltip>
-    //                 </CardTitle>
-    //               </CardHeader>
-    //               <CardContent>
-    //                 <Input
-    //                   id="funds_to_allocate"
-    //                   placeholder="100000 USD"
-    //                   required
-    //                   className="w-full"
-    //                 />
-    //               </CardContent>
-    //             </Card>
-    //             <Card>
-    //               <CardHeader className="flex items-center justify-between pb-2">
-    //                 <CardTitle className="text-sm font-medium flex items-center">
-    //                   Desired ESG Impact Score
-    //                   <Tooltip>
-    //                     <TooltipTrigger>
-    //                       <Icon className="ml-2 w-4 h-4" aria-label="Information icon" />
-    //                     </TooltipTrigger>
-    //                     <TooltipContent>
-    //                       <p>
-    //                         ESG score accounts for enterprise impact across
-    //                         environment, social, and governance.
-    //                       </p>
-    //                     </TooltipContent>
-    //                   </Tooltip>
-    //                 </CardTitle>
-    //               </CardHeader>
-    //               <CardContent>
-    //                 <Slider defaultValue={[33]} max={100} step={1} className="w-full" />
-    //               </CardContent>
-    //             </Card>
-    //             <Card>
-    // <CardHeader className="flex items-center justify-between pb-2">
-    //   <CardTitle className="text-sm font-medium">Desired Risk:
-    //                   <Tooltip>
-    //                     <TooltipTrigger>
-    //                       <Icon className="ml-2 w-4 h-4" aria-label="Information icon" />
-    //                     </TooltipTrigger>
-    //                     <TooltipContent>
-    //                       <p>
-    //                         Risk index defines desired risk coefficient.
-    //                       </p>
-    //                     </TooltipContent>
-    //                   </Tooltip>
-    //                 </CardTitle>
-    //               </CardHeader>
-    //               <CardContent>
-    //                 <Slider defaultValue={[33]} max={100} step={1} />
-    //               </CardContent>
-    //             </Card>
-    //             <div className="flex items-center justify-center lg:justify-start">
-    //               <Button
-    //                 className="px-8 py-2 rounded-md bg-teal-500 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-teal-500"
-    //                 asChild
-    //               >
-    //                 <Link href="/dashbaord/results">
-    //                   Optimize Portfolio
-    //                 </Link>
-    //               </Button>
-    //             </div>
-    //           </div>
-    //         </TabsContent>
-    //       </TooltipProvider>
-    //     </Tabs>
-    //   </div>
-    // </PageContainer>
   );
 }
