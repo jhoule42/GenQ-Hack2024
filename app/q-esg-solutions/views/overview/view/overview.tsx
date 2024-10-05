@@ -1,11 +1,19 @@
-import { AreaGraph } from '../area-graph';
-import { BarGraph } from '../bar-graph';
-import { PieGraph } from '../pie-graph';
+import { AreaGraph } from '../../results/area-graph';
+import { BarGraph } from '../../results/bar-graph';
+import { PieGraph } from '../../results/pie-graph';
 import { CalendarDateRangePicker } from '@/components/date-range-picker';
 import PageContainer from '@/components/layout/page-container';
-import { RecentSales } from '../recent-sales';
+import { RecentSales } from '../../results/recent-sales';
 import { Button } from '@/components/ui/button';
 import { Slider } from "@/components/ui/slider";
+import { Input } from "@/components/ui/input";
+import { Icons } from '@/components/icons';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger
+} from '@/components/ui/tooltip';
 import {
   Card,
   CardContent,
@@ -14,186 +22,223 @@ import {
   CardTitle
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import Link from 'next/link';
 
 export default function OverViewPage() {
+  const Icon = Icons.info;
+
   return (
     <PageContainer scrollable={true}>
-      <div className="space-y-2">
-        <div className="flex items-center justify-between space-y-2">
+      <div className="space-y-6">
+        {/* Header */}
+        <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold tracking-tight">
-            Hi, Welcome back 👋
+            Welcome back Q-ESG USER 👋
           </h2>
-          <div className="hidden items-center space-x-2 md:flex">
-            <CalendarDateRangePicker />
-            <Button>Download</Button>
-          </div>
         </div>
-        <Tabs defaultValue="overview" className="space-y-4">
+
+        {/* Tabs Section */}
+        <Tabs defaultValue="overview" className="space-y-6">
           <TabsList>
-            <TabsTrigger value="overview">Overview</TabsTrigger>
+            <TabsTrigger value="overview">
+              Basic
+            </TabsTrigger>
             <TabsTrigger value="analytics" disabled>
-              Analytics
+              Premium
             </TabsTrigger>
           </TabsList>
-          <TabsContent value="overview" className="space-y-4">
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-                <Card>
-                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+
+          <TooltipProvider>
+            <TabsContent value="overview" className="space-y-6">
+              {/* First Row - Funds Input */}
+              <div className="grid gap-6">
+                <Card className="w-full">
+                  <CardHeader className="pb-2">
                     <CardTitle className="text-sm font-medium">
-                        Select Assets to Analyze
+                      Desired Funds to Allocate (USD):
+                      <Tooltip>
+                        <TooltipTrigger>
+                          <Icon className="ml-2 w-4 h-4" aria-label="Information icon" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>
+                            Funds, in USD, allocated to portfolio optimzation.
+                          </p>
+                        </TooltipContent>
+                      </Tooltip>
                     </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                    <p>Menu Soon...</p>
-                    </CardContent>
+                  </CardHeader>
+                  <CardContent>
+                    <Input
+                      id="funds_to_allocate"
+                      placeholder="100000 USD"
+                      required
+                      className="w-full"
+                    />
+                  </CardContent>
                 </Card>
-                <Card>
-                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">
-                        Desired ESG Impact Score
+              </div>
+
+              <div className="grid gap-6 md:grid-cols-2">
+                {/* ESG Impact Score Slider */}
+                <Card className="w-full">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-sm font-medium flex items-center">
+                      Desired ESG Impact Score
+                      <Tooltip>
+                        <TooltipTrigger>
+                          <Icon className="ml-2 w-4 h-4" aria-label="Information icon" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>
+                            ESG score accounts for enterprise impact across
+                            environment, social, and governance.
+                          </p>
+                        </TooltipContent>
+                      </Tooltip>
                     </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                    <Slider defaultValue={[33]} max={100} step={1} />
-                    </CardContent>
+                  </CardHeader>
+                  <CardContent>
+                    <Slider defaultValue={[33]} max={100} step={1} className="w-full" />
+                  </CardContent>
                 </Card>
-                <Card>
-                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">
-                        Desired Risk
+
+                {/* Risk Slider */}
+                <Card className="w-full">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-sm font-medium flex items-center">
+                      Desired Risk Index:
+                      <Tooltip>
+                        <TooltipTrigger>
+                          <Icon className="ml-2 w-4 h-4" aria-label="Information icon" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>
+                            Risk index defines desired risk coefficient.
+                          </p>
+                        </TooltipContent>
+                      </Tooltip>
+
                     </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                    <Slider defaultValue={[33]} max={100} step={1} />
-                    </CardContent>
+                  </CardHeader>
+                  <CardContent>
+                    <Slider defaultValue={[33]} max={100} step={1} className="w-full" />
+                  </CardContent>
                 </Card>
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">
-                    Total Revenue
-                  </CardTitle>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="h-4 w-4 text-muted-foreground"
-                  >
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">$45,231.89</div>
-                  <p className="text-xs text-muted-foreground">
-                    +20.1% from last month
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">
-                    Subscriptions
-                  </CardTitle>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="h-4 w-4 text-muted-foreground"
-                  >
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
-                  </svg>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">+2350</div>
-                  <p className="text-xs text-muted-foreground">
-                    +180.1% from last month
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Sales</CardTitle>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="h-4 w-4 text-muted-foreground"
-                  >
-                    <rect width="20" height="14" x="2" y="5" rx="2" />
-                    <path d="M2 10h20" />
-                  </svg>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">+12,234</div>
-                  <p className="text-xs text-muted-foreground">
-                    +19% from last month
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">
-                    Active Now
-                  </CardTitle>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="h-4 w-4 text-muted-foreground"
-                  >
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                  </svg>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">+573</div>
-                  <p className="text-xs text-muted-foreground">
-                    +201 since last hour
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7">
-              <div className="col-span-4">
-                <BarGraph />
               </div>
-              <Card className="col-span-4 md:col-span-3">
-                <CardHeader>
-                  <CardTitle>Recent Sales</CardTitle>
-                  <CardDescription>
-                    You made 265 sales this month.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <RecentSales />
-                </CardContent>
-              </Card>
-              <div className="col-span-4">
-                <AreaGraph />
+
+              {/* Third Row - Optimize Portfolio Button */}
+              <div className="flex justify-center">
+                <Button
+                  className="px-8 py-3 rounded-md bg-teal-500 text-white font-bold transition duration-200 hover:bg-white hover:text-teal-500 border-2 border-transparent hover:border-teal-500"
+                  asChild
+                >
+                  <Link href="/dashboard/results">Optimize Portfolio</Link>
+                </Button>
               </div>
-              <div className="col-span-4 md:col-span-3">
-                <PieGraph />
-              </div>
-            </div>
-          </TabsContent>
+            </TabsContent>
+          </TooltipProvider>
         </Tabs>
       </div>
     </PageContainer>
+    // <PageContainer scrollable={true}>
+    //   <div className="space-y-4">
+    //     <div className="flex items-center justify-between space-y-2">
+    //       <h2 className="text-2xl font-bold tracking-tight">
+    //         Welcome back Q-ESG USER👋
+    //       </h2>
+    //     </div>
+    //     <Tabs defaultValue="overview" className="space-y-6">
+    //       <TabsList>
+    //         <TabsTrigger value="overview">Overview</TabsTrigger>
+    //         <TabsTrigger value="analytics" disabled>
+    //           Analytics
+    //         </TabsTrigger>
+    //       </TabsList>
+    //       <TooltipProvider>
+    //         <TabsContent value="overview" className="space-y-4">
+    //           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+    //             {/* <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4"></div> */}
+    //             <Card>
+    //               <CardHeader className="flex items-center justify-between pb-2">
+    //                 <CardTitle className="text-sm font-medium flex items-center">
+    //                   Desired Funds to Allocate (USD):
+    // <Tooltip>
+    //   <TooltipTrigger>
+    //     <Icon className="ml-2 w-4 h-4" aria-label="Information icon" />
+    //   </TooltipTrigger>
+    //   <TooltipContent>
+    //     <p>
+    //       Funds, in USD, allocated to portfolio optimzation.
+    //     </p>
+    //   </TooltipContent>
+    // </Tooltip>
+    //                 </CardTitle>
+    //               </CardHeader>
+    //               <CardContent>
+    //                 <Input
+    //                   id="funds_to_allocate"
+    //                   placeholder="100000 USD"
+    //                   required
+    //                   className="w-full"
+    //                 />
+    //               </CardContent>
+    //             </Card>
+    //             <Card>
+    //               <CardHeader className="flex items-center justify-between pb-2">
+    //                 <CardTitle className="text-sm font-medium flex items-center">
+    //                   Desired ESG Impact Score
+    //                   <Tooltip>
+    //                     <TooltipTrigger>
+    //                       <Icon className="ml-2 w-4 h-4" aria-label="Information icon" />
+    //                     </TooltipTrigger>
+    //                     <TooltipContent>
+    //                       <p>
+    //                         ESG score accounts for enterprise impact across
+    //                         environment, social, and governance.
+    //                       </p>
+    //                     </TooltipContent>
+    //                   </Tooltip>
+    //                 </CardTitle>
+    //               </CardHeader>
+    //               <CardContent>
+    //                 <Slider defaultValue={[33]} max={100} step={1} className="w-full" />
+    //               </CardContent>
+    //             </Card>
+    //             <Card>
+    // <CardHeader className="flex items-center justify-between pb-2">
+    //   <CardTitle className="text-sm font-medium">Desired Risk:
+    //                   <Tooltip>
+    //                     <TooltipTrigger>
+    //                       <Icon className="ml-2 w-4 h-4" aria-label="Information icon" />
+    //                     </TooltipTrigger>
+    //                     <TooltipContent>
+    //                       <p>
+    //                         Risk index defines desired risk coefficient.
+    //                       </p>
+    //                     </TooltipContent>
+    //                   </Tooltip>
+    //                 </CardTitle>
+    //               </CardHeader>
+    //               <CardContent>
+    //                 <Slider defaultValue={[33]} max={100} step={1} />
+    //               </CardContent>
+    //             </Card>
+    //             <div className="flex items-center justify-center lg:justify-start">
+    //               <Button
+    //                 className="px-8 py-2 rounded-md bg-teal-500 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-teal-500"
+    //                 asChild
+    //               >
+    //                 <Link href="/dashbaord/results">
+    //                   Optimize Portfolio
+    //                 </Link>
+    //               </Button>
+    //             </div>
+    //           </div>
+    //         </TabsContent>
+    //       </TooltipProvider>
+    //     </Tabs>
+    //   </div>
+    // </PageContainer>
   );
 }
