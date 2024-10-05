@@ -5,6 +5,7 @@ import { CalendarDateRangePicker } from '@/components/date-range-picker';
 import PageContainer from '@/components/layout/page-container';
 import { RecentSales } from '../recent-sales';
 import { Button } from '@/components/ui/button';
+import { Slider } from "@/components/ui/slider";
 import {
   Card,
   CardContent,
@@ -36,6 +37,36 @@ export default function OverViewPage() {
           </TabsList>
           <TabsContent value="overview" className="space-y-4">
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+                <Card>
+                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                    <CardTitle className="text-sm font-medium">
+                        Select Assets to Analyze
+                    </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                    <p>Menu Soon...</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                    <CardTitle className="text-sm font-medium">
+                        Desired ESG Impact Score
+                    </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                    <Slider defaultValue={[33]} max={100} step={1} />
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                    <CardTitle className="text-sm font-medium">
+                        Desired Risk
+                    </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                    <Slider defaultValue={[33]} max={100} step={1} />
+                    </CardContent>
+                </Card>
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
