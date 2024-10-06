@@ -492,7 +492,7 @@ const Home = () => {
           <div className="flex items-center flex-col pt-8">
             <Link href="/dashboard">
               <Cover
-                className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center relative z-20 rounded-md"
+                className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center relative z-80 rounded-md"
               >
                 Launch
               </Cover>

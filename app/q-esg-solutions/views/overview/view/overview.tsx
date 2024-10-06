@@ -79,7 +79,7 @@ export default function OverViewPage() {
                 <Card className="w-full">
                   <CardHeader className="pb-2">
                     <CardTitle className="text-sm font-medium flex items-center">
-                      Funds to Allocate (USD):
+                      Investment Capital (USD):
                       <Tooltip>
                         <TooltipTrigger>
                           <Icon className="ml-2 w-4 h-4" aria-label="Information icon" />
