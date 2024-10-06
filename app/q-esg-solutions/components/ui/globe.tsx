@@ -1,10 +1,11 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from "three";
+import { Color, Vector3 } from "three";
 import ThreeGlobe from "three-globe";
-import { useThree, Object3DNode, Canvas, extend } from "@react-three/fiber";
+import { Canvas, extend, useThree, Object3DNode } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import countries from "@/constants/globe.json";
+
 declare module "@react-three/fiber" {
   interface ThreeElements {
     threeGlobe: Object3DNode<ThreeGlobe, typeof ThreeGlobe>;
@@ -14,7 +15,6 @@ declare module "@react-three/fiber" {
 extend({ ThreeGlobe });
 
 const RING_PROPAGATION_SPEED = 3;
-const aspect = 1.2;
 const cameraZ = 300;
 
 type Position = {
@@ -157,9 +157,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
         .showAtmosphere(defaultProps.showAtmosphere)
         .atmosphereColor(defaultProps.atmosphereColor)
         .atmosphereAltitude(defaultProps.atmosphereAltitude)
-        .hexPolygonColor((e) => {
-          return defaultProps.polygonColor;
-        });
+        .hexPolygonColor(() => defaultProps.polygonColor);
       startAnimation();
     }
   }, [globeData]);
@@ -174,16 +172,12 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .arcEndLat((d) => (d as { endLat: number }).endLat * 1)
       .arcEndLng((d) => (d as { endLng: number }).endLng * 1)
       .arcColor((e: any) => (e as { color: string }).color)
-      .arcAltitude((e) => {
-        return (e as { arcAlt: number }).arcAlt * 1;
-      })
-      .arcStroke((e) => {
-        return [0.32, 0.28, 0.3][Math.round(Math.random() * 2)];
-      })
+      .arcAltitude((e) => (e as { arcAlt: number }).arcAlt * 1)
+      .arcStroke(() => [0.32, 0.28, 0.3][Math.round(Math.random() * 2)])
       .arcDashLength(defaultProps.arcLength)
       .arcDashInitialGap((e) => (e as { order: number }).order * 1)
       .arcDashGap(15)
-      .arcDashAnimateTime((e) => defaultProps.arcTime);
+      .arcDashAnimateTime(() => defaultProps.arcTime);
 
     globeRef.current
       .pointsData(data)
@@ -223,11 +217,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
     };
   }, [globeRef.current, globeData]);
 
-  return (
-    <>
-      <threeGlobe ref={globeRef} />
-    </>
-  );
+  return <threeGlobe ref={globeRef} />;
 }
 
 export function WebGLRendererConfig() {
@@ -237,15 +227,13 @@ export function WebGLRendererConfig() {
     gl.setPixelRatio(window.devicePixelRatio);
     gl.setSize(size.width, size.height);
     gl.setClearColor(0xffaaff, 0);
-  }, []);
+  }, [gl, size]);
 
   return null;
 }
+
 export function World(props: WorldProps) {
   const { globeConfig } = props;
-  
-  const { camera } = useThree(); // Access the default camera
-  camera.position.set(0, 0, 300); // Set the desired camera position
 
   return (
     <Canvas>
@@ -256,75 +244,39 @@ export function World(props: WorldProps) {
         position={[-400, 100, 400]}
       />
       <directionalLight
-        color={globeConfig.pointLight}
-        position={[-200, 500, 200]}
+        color={globeConfig.directionalLeftLight}
+        position={[-1, 0, 1]}
+        intensity={1.2}
       />
-      <pointLight
-        color={globeConfig.pointLight}
-        position={[-200, 500, 200]}
-        intensity={0.8}
+      <directionalLight
+        color={globeConfig.directionalTopLight}
+        position={[1, 0, 1]}
+        intensity={1}
+      />
+      <OrbitControls
+        autoRotate={globeConfig.autoRotate}
+        autoRotateSpeed={globeConfig.autoRotateSpeed}
+        enableZoom={false}
       />
       <Globe {...props} />
-      <OrbitControls
-        enablePan={false}
-        enableZoom={false}
-        minDistance={300}
-        maxDistance={300}
-        autoRotateSpeed={1}
-        autoRotate={true}
-        minPolarAngle={Math.PI / 3.5}
-        maxPolarAngle={Math.PI - Math.PI / 3}
-      />
     </Canvas>
   );
 }
 
-// export function World(props: WorldProps) {
-//   const { globeConfig } = props;
-//   const scene = new Scene();
-//   scene.fog = new Fog(0xffffff, 400, 2000);
-//   return (
-//     <Canvas 
-//       scene={scene} 
-//       camera={new PerspectiveCamera(50, aspect, 180, 1800)}
-//     >
-//       <WebGLRendererConfig />
-//       <ambientLight color={globeConfig.ambientLight} intensity={0.6} />
-//       <directionalLight
-//         color={globeConfig.directionalLeftLight}
-//         position={new Vector3(-400, 100, 400)}
-//       />
-//       <directionalLight
-//         color={globeConfig.directionalTopLight}
-//         position={new Vector3(-200, 500, 200)}
-//       />
-//       <pointLight
-//         color={globeConfig.pointLight}
-//         position={new Vector3(-200, 500, 200)}
-//         intensity={0.8}
-//       />
-//       <Globe {...props} />
-//       <OrbitControls
-//         enablePan={false}
-//         enableZoom={false}
-//         minDistance={cameraZ}
-//         maxDistance={cameraZ}
-//         autoRotateSpeed={1}
-//         autoRotate={true}
-//         minPolarAngle={Math.PI / 3.5}
-//         maxPolarAngle={Math.PI - Math.PI / 3}
-//       />
-//     </Canvas>
-//   );
-// }
+function genRandomNumbers(min: number, max: number, count: number) {
+  let randomNumbers: any[] = [];
 
-export function hexToRgb(hex: string) {
-  var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-  hex = hex.replace(shorthandRegex, function (m, r, g, b) {
-    return r + r + g + g + b + b;
-  });
+  while (randomNumbers.length < count) {
+    const num = Math.floor(Math.random() * (max - min)) + min;
+    if (!randomNumbers.includes(num)) randomNumbers.push(num);
+  }
 
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return randomNumbers;
+}
+
+function hexToRgb(hex: string) {
+  const regex = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i;
+  const result = regex.exec(hex);
   return result
     ? {
         r: parseInt(result[1], 16),
@@ -332,14 +284,4 @@ export function hexToRgb(hex: string) {
         b: parseInt(result[3], 16),
       }
     : null;
-}
-
-export function genRandomNumbers(min: number, max: number, count: number) {
-  const arr = [];
-  while (arr.length < count) {
-    const r = Math.floor(Math.random() * (max - min)) + min;
-    if (arr.indexOf(r) === -1) arr.push(r);
-  }
-
-  return arr;
 }
