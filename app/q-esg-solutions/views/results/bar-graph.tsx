@@ -175,7 +175,6 @@ export function BarGraph() {
           className="aspect-auto h-[280px] w-full"
         >
           <BarChart
-            accessibilityLayer
             data={chartData}
             margin={{
               left: 12,

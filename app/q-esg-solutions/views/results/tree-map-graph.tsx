@@ -152,8 +152,54 @@ const chartData = [
     },
 ];
 
+interface CustomizedContentProps {
+    root: { children: any[] };  // Adjust the type as per your data structure
+    depth: number;
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    index: number;
+    payload: any;
+    colors: string[];
+    rank?: number; 
+    name: string;
+}
+
 const COLORS = ['#8889DD', '#9597E4', '#8DC77B', '#A5D297', '#E2CF45', '#F8C12D'];
 
+class CustomizedContent extends PureComponent<CustomizedContentProps> {
+    render() {
+        const { root, depth, x, y, width, height, index, payload, colors, rank, name } = this.props;
+
+        return (
+            <g>
+                <rect
+                    x={x}
+                    y={y}
+                    width={width}
+                    height={height}
+                    style={{
+                        fill: depth < 2 ? colors[Math.floor((index / root.children.length) * 6)] : '#ffffff00',
+                        stroke: '#fff',
+                        strokeWidth: 2 / (depth + 1e-10),
+                        strokeOpacity: 1 / (depth + 1e-10),
+                    }}
+                />
+                {depth === 1 ? (
+                    <text x={x + width / 2} y={y + height / 2 + 7} textAnchor="middle" fill="#fff" fontSize={14}>
+                        {name}
+                    </text>
+                ) : null}
+                {depth === 1 ? (
+                    <text x={x + 4} y={y + 18} fill="#fff" fontSize={16} fillOpacity={0.9}>
+                        {index + 1}
+                    </text>
+                ) : null}
+            </g>
+        );
+    }
+}
 
 const chartConfig = {
     desktop: {
@@ -166,66 +212,48 @@ const chartConfig = {
     }
 } satisfies ChartConfig;
 
-interface CustomizedContentProps {
-    root: any;
-    depth: number;
-    x: number;
-    y: number;
-    width: number;
-    height: number;
-    index: number;
-    payload: any;
-    colors: string[];
-    rank: number;
-    name: string;
-}
-class CustomizedContent extends PureComponent<CustomizedContentProps> {
-    render() {
-      const { root, depth, x, y, width, height, index, colors, name } = this.props;
-  
-      return (
-        <g>
-          <rect
-            x={x}
-            y={y}
-            width={width}
-            height={height}
-            style={{
-              fill: depth < 2 ? colors[Math.floor((index / root.children.length) * 6)] : '#ffffff00',
-              stroke: '#fff',
-              strokeWidth: 2 / (depth + 1e-10),
-              strokeOpacity: 1 / (depth + 1e-10),
-            }}
-          />
-          {depth === 1 ? (
-            <>
-              <text x={x + width / 2} y={y + height / 2 + 7} textAnchor="middle" fill="#fff" fontSize={14}>
-                {name}
-              </text>
-              <text x={x + 4} y={y + 18} fill="#fff" fontSize={16} fillOpacity={0.9}>
-                {index + 1}
-              </text>
-            </>
-          ) : null}
-        </g>
-      );
-    }
-  }
-  
-  export function TreeGraph() {
+export function TreeGraph() {
     return (
-      <ResponsiveContainer width="100%" height="100%">
-        <Treemap
-          width={400}
-          height={200}
-          data={chartData}
-          dataKey="size"
-          stroke="#fff"
-          fill="#8884d8"
-          content={
-            (props: CustomizedContentProps) => <CustomizedContent {...props} colors={COLORS} />
-          }
-        />
-      </ResponsiveContainer>
+        <Card>
+            <CardHeader>
+                <CardTitle>Tree Map - Stacked</CardTitle>
+                <CardDescription>
+                    Showing total visitors for the last 6 months
+                </CardDescription>
+            </CardHeader>
+            <CardContent>
+                <ChartContainer
+                    config={chartConfig}
+                    className="aspect-auto h-[310px] w-full"
+                >
+                    {/* <ResponsiveContainer width="100%" height="100%">
+                        <Treemap width={400} height={200} data={chartData} dataKey="size" aspectRatio={4 / 3} stroke="#fff" fill="#8884d8" />
+                    </ResponsiveContainer> */}
+                    <ResponsiveContainer width="100%" height="100%">
+                        <Treemap
+                            width={400}
+                            height={200}
+                            data={chartData}
+                            dataKey="size"
+                            stroke="#fff"
+                            fill="#8884d8"
+                            content={<CustomizedContent colors={COLORS} />}
+                        />
+                    </ResponsiveContainer>
+                </ChartContainer>
+            </CardContent>
+            <CardFooter>
+                <div className="flex w-full items-start gap-2 text-sm">
+                    <div className="grid gap-2">
+                        <div className="flex items-center gap-2 font-medium leading-none">
+                            Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+                        </div>
+                        <div className="flex items-center gap-2 leading-none text-muted-foreground">
+                            January - June 2024
+                        </div>
+                    </div>
+                </div>
+            </CardFooter>
+        </Card>
     );
-  }
+}

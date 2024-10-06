@@ -35,7 +35,6 @@ import {
     X
   } from 'lucide-react';
   
-  export type Icon = LucideIcon;
   
   export const Icons = {
     dashboard: LayoutDashboardIcon,
@@ -68,7 +67,7 @@ import {
     tree: TreeDeciduous,
     moon: Moon,
     laptop: Laptop,
-    gitHub: ({ ...props }: LucideProps) => (
+    gitHub: ({ ...props }: any) => (
       <svg
         aria-hidden="true"
         focusable="false"

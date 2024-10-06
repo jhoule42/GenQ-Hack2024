@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import { csvParse } from 'd3-dsv';
+import { formatChartData, parseCSV } from "@/lib/csvParser";
 import { AreaGraph } from '../area-graph';
 import { BarGraph } from '../bar-graph';
 import { PieGraph } from '../pie-graph';
@@ -21,6 +21,12 @@ import {
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { TreeGraph } from '../tree-map-graph';
+
+interface MSCIStockData {
+  date: string;  // Or Date if you're handling it as Date objects
+  close: number;
+  [key: string]: any; // Allow other dynamic fields from CSV
+}
 
 interface StockData {
   id: string;
@@ -161,44 +167,38 @@ const mockStocks: StockData[] = [
   },
 ];
 
-const parseCSV = (csvString: string) => {
-  const data = csvParse(csvString);
-  return data.map((row: any) => ({
-    date: new Date(row['Date']),
-    open: +row['Open'],
-    high: +row['High'],
-    low: +row['Low'],
-    close: +row['Close'],
-    volume: +row['Volume'],
-    dividends: +row['Dividends'],
-    splits: +row['Stock Splits'],
-    capitalGains: +row['Capital Gains'],
-    normalized: +row['Normalized'],
-  }));
-};
-
 export default function ResultsPage() {
   const [predictedImpact, setPredictedImpact] = useState<string[]>([]);
-  const [dataSPY, setDataSPY] = useState<any[]>([]);
-  const [dataMSCI, setDataMSCI] = useState<any[]>([]);
+  const [dataSPY, setDataSPY] = useState<MSCIStockData[]>([]);
+    const [dataMSCI, setDataMSCI] = useState<MSCIStockData[]>([]);
 
-  // useEffect(() => {
-  //   const loadCSVData = async () => {
-  //     const SPYResponse = spy_dt; 
-  //     const MSCIResponse = await fetch('../../../MSCI_social.csv');
-      
-  //     const SPYText = await spy_dt.text();
-  //     const MSCIText = await MSCIResponse.text();
+    useEffect(() => {
+        const fetchCSVData = async () => {
+            try {
+                // Fetch SPY CSV data
+                const responseSPY = await fetch('/public/SPY.csv');
+                const csvSPY = await responseSPY.text();
+                const parsedSPY = await parseCSV(csvSPY);
 
-  //     const parsedSPY = parseCSV(SPYText);
-  //     const parsedMSCI = parseCSV(MSCIText);
+                // Format parsed data
+                const formattedSPY = formatChartData(parsedSPY as StockData[]); 
+                setDataSPY(formattedSPY); // Set formatted SPY data
 
-  //     setDataSPY(parsedSPY);
-  //     setDataMSCI(parsedMSCI);
-  //   };
+                // Fetch MSCI CSV data
+                const responseMSCI = await fetch('/public/MSCI_social.csv');
+                const csvMSCI = await responseMSCI.text();
+                const parsedMSCI = await parseCSV(csvMSCI);
 
-  //   loadCSVData();
-  // }, []);
+                // Format parsed data
+                const formattedMSCI = formatChartData(parsedMSCI as StockData[]); 
+                setDataMSCI(formattedMSCI); // Set formatted MSCI data
+            } catch (error) {
+                console.error("Error fetching or parsing CSV data:", error);
+            }
+        };
+
+        fetchCSVData();
+    }, []);
 
   useEffect(() => {
     const fetchPredictedImpact = async () => {

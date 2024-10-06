@@ -52,7 +52,6 @@ export function AreaGraph() {
           className="aspect-auto h-[310px] w-full"
         >
           <AreaChart
-            accessibilityLayer
             data={chartData}
             margin={{
               left: 12,

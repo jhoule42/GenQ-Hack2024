@@ -2,7 +2,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
-import { Button } from '@/components/ui/button';
 import { Cover } from '@/components/ui/cover';
 import Link from 'next/link';
 
@@ -399,130 +398,125 @@ const Home = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-green-100 to-blue-200 relative">
       <header className="mb-8">
-        <h1 className="text-6xl font-extrabold">Q-Impact</h1>
+        <h1 className="text-6xl font-extrabold mt-4">
+          Q-Impact
+        </h1>
       </header>
       <main className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-black bg-white relative w-full">
         <div>
-            <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  y: 20,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  duration: 1,
-                }}
-                className="div"
-              >
-                <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
+          <motion.div
+            className="absolute left-4 bottom-0 h-48 w-20 bg-green-600 rounded-full shadow-lg"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.5 }}
+          >
+            <motion.div
+              className="bg-green-400 h-16 w-16 rounded-full absolute top-2 left-2"
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+            />
+          </motion.div>
+
+          <motion.div
+            className="absolute right-4 bottom-0 h-48 w-20 bg-green-600 rounded-full shadow-lg"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.5 }}
+          >
+            <motion.div
+              className="bg-green-400 h-16 w-16 rounded-full absolute top-2 left-2"
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+            />
+          </motion.div>
+          <motion.div
+            className="absolute left-10 sm:left-16 bottom-0 h-32 w-16 bg-green-600 rounded-full shadow-lg"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.5 }}
+          >
+            <motion.div
+              className="bg-green-400 h-12 w-12 rounded-full absolute top-2 left-2"
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+            />
+          </motion.div>
+
+          <motion.div
+            className="absolute right-12 sm:right-24 bottom-0 h-28 w-12 bg-green-700 rounded-full shadow-lg"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.5 }}
+          >
+            <motion.div
+              className="bg-green-500 h-10 w-10 rounded-full absolute top-1 left-1"
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+            />
+          </motion.div>
+          <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 1,
+              }}
+              className="div"
+            >
+              <div className="mb-20 sm:mb-8">
+                <h2 className="text-center text-xl md:text-4xl font-bold text-green-800 ">
                   Empowering Sustainable Investments with Quantum Precision
                 </h2>
-                <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
+                <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 w-full mt-2 mx-auto">
                   ESG Portfolio Management leveraging Quantum-Approximate-Optimization-Algorithms.
                 </p>
-              </motion.div>
-              <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
-              <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
-                <World data={sampleArcs} globeConfig={globeConfig} />
               </div>
+            </motion.div>
+            <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
+            <div className="hidden md:flex absolute w-full -bottom-20 h-72 md:h-full z-10">
+              <World data={sampleArcs} globeConfig={globeConfig} />
             </div>
-            <div className="flex flex-col py-4">
-              <Button
-                className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white"
-                asChild
-              >
-                <Link href="/dashboard">
-                  <Cover>Launch</Cover>
-                </Link>
-              </Button>
           </div>
+          <div className="flex items-center flex-col pt-8">
+            <Link href="/dashboard">
+              <Cover
+                className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center relative z-20 rounded-md"
+              >
+                Launch
+              </Cover>
+            </Link>
+          </div>
+          <div className="relative w-full overflow-hidden">
+            <div className="absolute inset-x-0 bottom-0 h-20 bg-blue-500">
+              <svg
+                className="absolute bottom-0 w-full h-full"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 320"
+              >
+                <path
+                  fill="#38bdf8"
+                  fillOpacity="1"
+                  d="M0,160L80,144C160,128,320,96,480,106.7C640,117,800,171,960,170.7C1120,171,1280,117,1360,96L1440,80L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+                />
+              </svg>
+            </div>
+          </div>
+
         </div>
       </main>
     </div>
-    // <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-green-100 to-blue-200 relative">
-    //   <header className="mb-8">
-    //     <h1 className="text-6xl font-extrabold text-green-900">Q-Impact</h1>
-    //   </header>
-
-    //   {/* Main content with environmental theme */}
-    //   <main className="flex flex-row items-center justify-center py-20 h-screen md:h-auto relative w-full">
-    //     <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
-
-    //       {/* Trees on the sides */}
-    //       <motion.div
-    //         className="absolute left-4 bottom-0 h-48 w-20 bg-green-600 rounded-full shadow-lg"
-    //         initial={{ opacity: 0, scale: 0.8 }}
-    //         animate={{ opacity: 1, scale: 1 }}
-    //         transition={{ duration: 1.5 }}
-    //       >
-    //         <motion.div
-    //           className="bg-green-400 h-16 w-16 rounded-full absolute top-2 left-2"
-    //           initial={{ y: 20 }}
-    //           animate={{ y: 0 }}
-    //           transition={{ delay: 0.3, duration: 0.8 }}
-    //         />
-    //       </motion.div>
-
-    //       <motion.div
-    //         className="absolute right-4 bottom-0 h-48 w-20 bg-green-600 rounded-full shadow-lg"
-    //         initial={{ opacity: 0, scale: 0.8 }}
-    //         animate={{ opacity: 1, scale: 1 }}
-    //         transition={{ duration: 1.5 }}
-    //       >
-    //         <motion.div
-    //           className="bg-green-400 h-16 w-16 rounded-full absolute top-2 left-2"
-    //           initial={{ y: 20 }}
-    //           animate={{ y: 0 }}
-    //           transition={{ delay: 0.3, duration: 0.8 }}
-    //         />
-    //       </motion.div>
-
-    //       <motion.div
-    //         initial={{
-    //           opacity: 0,
-    //           y: 20,
-    //         }}
-    //         animate={{
-    //           opacity: 1,
-    //           y: 0,
-    //         }}
-    //         transition={{
-    //           duration: 1,
-    //         }}
-    //         className="div"
-    //       >
-    //         <h2 className="text-center text-xl md:text-4xl font-bold text-green-900">
-    //           Empowering Sustainable Investments with Quantum Precision
-    //         </h2>
-    //         <p className="text-center text-base md:text-lg font-normal text-green-700 max-w-md mt-2 mx-auto">
-    //           ESG Portfolio Management leveraging Quantum-Approximate-Optimization-Algorithms.
-    //         </p>
-    //       </motion.div>
-
-    //       <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
-    //       <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
-    //         <World data={sampleArcs} globeConfig={globeConfig} />
-    //       </div>
-
-    //       <div className="flex flex-col py-4">
-    //         <Button
-    //           className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-green-800 via-green-600 to-green-400"
-    //           asChild
-    //         >
-    //           <Link href="/dashboard">
-    //             <Cover>Launch</Cover>
-    //           </Link>
-    //         </Button>
-    //       </div>
-    //     </div>
-    //   </main>
-    // </div>
   );
 };
 
