@@ -170,35 +170,35 @@ const mockStocks: StockData[] = [
 export default function ResultsPage() {
   const [predictedImpact, setPredictedImpact] = useState<string[]>([]);
   const [dataSPY, setDataSPY] = useState<MSCIStockData[]>([]);
-    const [dataMSCI, setDataMSCI] = useState<MSCIStockData[]>([]);
+  const [dataMSCI, setDataMSCI] = useState<MSCIStockData[]>([]);
 
-    useEffect(() => {
-        const fetchCSVData = async () => {
-            try {
-                // Fetch SPY CSV data
-                const responseSPY = await fetch('/public/SPY.csv');
-                const csvSPY = await responseSPY.text();
-                const parsedSPY = await parseCSV(csvSPY);
+  useEffect(() => {
+    const fetchCSVData = async () => {
+      try {
+        // Fetch SPY CSV data
+        const responseSPY = await fetch('/public/SPY.csv');
+        const csvSPY = await responseSPY.text();
+        const parsedSPY = await parseCSV(csvSPY);
 
-                // Format parsed data
-                const formattedSPY = formatChartData(parsedSPY as StockData[]); 
-                setDataSPY(formattedSPY); // Set formatted SPY data
+        // Format parsed data
+        const formattedSPY = formatChartData(parsedSPY as StockData[]);
+        setDataSPY(formattedSPY); // Set formatted SPY data
 
-                // Fetch MSCI CSV data
-                const responseMSCI = await fetch('/public/MSCI_social.csv');
-                const csvMSCI = await responseMSCI.text();
-                const parsedMSCI = await parseCSV(csvMSCI);
+        // Fetch MSCI CSV data
+        const responseMSCI = await fetch('/public/MSCI_social.csv');
+        const csvMSCI = await responseMSCI.text();
+        const parsedMSCI = await parseCSV(csvMSCI);
 
-                // Format parsed data
-                const formattedMSCI = formatChartData(parsedMSCI as StockData[]); 
-                setDataMSCI(formattedMSCI); // Set formatted MSCI data
-            } catch (error) {
-                console.error("Error fetching or parsing CSV data:", error);
-            }
-        };
+        // Format parsed data
+        const formattedMSCI = formatChartData(parsedMSCI as StockData[]);
+        setDataMSCI(formattedMSCI); // Set formatted MSCI data
+      } catch (error) {
+        console.error("Error fetching or parsing CSV data:", error);
+      }
+    };
 
-        fetchCSVData();
-    }, []);
+    fetchCSVData();
+  }, []);
 
   useEffect(() => {
     const fetchPredictedImpact = async () => {
@@ -227,11 +227,12 @@ export default function ResultsPage() {
       <div className="space-y-2">
         <div className="flex items-center justify-between space-y-2">
           <h2 className="text-2xl font-bold tracking-tight">
-            ESG Investment Allocations
+            ESG Investments
           </h2>
           <div className="hidden items-center space-x-2 md:flex">
             <CalendarDateRangePicker />
-            <Button>Download</Button>
+            <Button>Generate Report</Button>
+            {/* <Button>Download</Button> */}
           </div>
         </div>
         <Tabs defaultValue="current" className="space-y-4">
@@ -244,11 +245,11 @@ export default function ResultsPage() {
             </TabsTrigger>
           </TabsList>
           <TabsContent value="current" className="space-y-4">
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
-                    Total ROI
+                    Return On Investment
                   </CardTitle>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -264,9 +265,9 @@ export default function ResultsPage() {
                   </svg>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">$45,231.89</div>
+                  <div className="text-2xl font-bold">$152,231.89</div>
                   <p className="text-xs text-muted-foreground">
-                    +20.1% from last month
+                    +15.21% from last year
                   </p>
                 </CardContent>
               </Card>
@@ -293,13 +294,89 @@ export default function ResultsPage() {
                   </svg>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">+2350</div>
+                  <div className="text-2xl font-bold">
+                    -7.2% C02 Emissions
+                  </div>
                   <p className="text-xs text-muted-foreground">
-                    +180.1% from last month
+                    Equivalent to <b>701</b> trees planted
                   </p>
                 </CardContent>
               </Card>
 
+              <Card>
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                  <CardTitle className="text-sm font-medium">
+                    Q-Impact Points
+                  </CardTitle>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="lucide lucide-vegan"
+                  >
+                    <path d="M2 2a26.6 26.6 0 0 1 10 20c.9-6.82 1.5-9.5 4-14" />
+                    <path d="M16 8c4 0 6-2 6-6-4 0-6 2-6 6" /><path d="M17.41 3.6a10 10 0 1 0 3 3" />
+                  </svg>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-2xl font-bold">+573</div>
+                  <p className="text-xs text-muted-foreground">
+                    +73 from Q3
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+            <Card>
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-sm font-medium">
+                  Predicted Environmental Impact
+                </CardTitle>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  className="h-4 w-4 text-muted-foreground"
+                >
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </CardHeader>
+              <CardContent>
+                <div className="text-2xl font-bold">+573</div>
+                <p className="text-xs text-muted-foreground">
+                  COHERE GENERATED CUASE AND EFFECTS
+                </p>
+              </CardContent>
+            </Card>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7">
+              <div className="col-span-4">
+                <BarGraph />
+              </div>
+              <div className="col-span-4 md:col-span-3">
+                <TreeGraph />
+              </div>
+              {/* <div className="col-span-4">
+                <AreaGraph />
+              </div>
+              <div className="col-span-4 md:col-span-3">
+                <PieGraph />
+              </div> */}
+            </div>
+          </TabsContent>
+          <TabsContent value="historical" className="space-y-4">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7">
+              <div className="col-span-4">
+                <LineGraph dataSPY={dataSPY} dataMSCI={dataMSCI} />
+              </div>
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
@@ -330,55 +407,6 @@ export default function ResultsPage() {
                   )}
                 </CardContent>
               </Card>
-            </div>
-            <Card>
-              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">
-                  Predicted Environmental Impact
-                </CardTitle>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  className="lucide lucide-vegan"
-                >
-                  <path d="M2 2a26.6 26.6 0 0 1 10 20c.9-6.82 1.5-9.5 4-14" />
-                  <path d="M16 8c4 0 6-2 6-6-4 0-6 2-6 6" /><path d="M17.41 3.6a10 10 0 1 0 3 3" />
-                </svg>
-              </CardHeader>
-              <CardContent>
-                <div className="text-2xl font-bold">+573</div>
-                <p className="text-xs text-muted-foreground">
-                  COHERE GENERATED CUASE AND EFFECTS
-                </p>
-              </CardContent>
-            </Card>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7">
-              <div className="col-span-4">
-                <BarGraph />
-              </div>
-              <div className="col-span-4 md:col-span-3">
-                <TreeGraph />
-              </div>
-              <div className="col-span-4">
-                <AreaGraph />
-              </div>
-              <div className="col-span-4 md:col-span-3">
-                <PieGraph />
-              </div>
-            </div>
-          </TabsContent>
-          <TabsContent value="historical" className="space-y-4">
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7">
-              <div className="col-span-4">
-                <LineGraph dataSPY={dataSPY} dataMSCI={dataMSCI} />
-              </div>
             </div>
           </TabsContent>
         </Tabs>

@@ -22,10 +22,10 @@ export const navItems: NavItem[] = [
     icon: 'kanban',
     label: 'results'
   },
-  {
-    title: 'Login',
-    href: '/',
-    icon: 'login',
-    label: 'login'
-  }
+  // {
+  //   title: 'Login',
+  //   href: '/',
+  //   icon: 'login',
+  //   label: 'login'
+  // }
 ];

@@ -151,7 +151,7 @@ export default function OverViewPage() {
                 <Card className="w-full">
                   <CardHeader className="pb-2">
                     <CardTitle className="text-sm font-medium flex items-center">
-                      Desired Risk Index:
+                      Desired Returns:
                       <Tooltip>
                         <TooltipTrigger>
                           <Icon className="ml-2 w-4 h-4" aria-label="Information icon" />
@@ -167,25 +167,26 @@ export default function OverViewPage() {
                   <CardContent>
                     <div className="flex items-center justify-between">
                       <label htmlFor="risk-slider" className="text-xs font-medium text-gray-700">
-                        Low Risk (0)
+                        Low Return (5%)
                       </label>
                       <span id="risk-index" className="text-sm font-bold text-red-600">
                         {riskIndex}
                       </span>
                       <label htmlFor="risk-slider" className="text-xs font-medium text-gray-700">
-                        High Risk (100)
+                        High Return (50%)
                       </label>
                     </div>
                     <Slider
                       id="risk-slider"
                       value={[riskIndex]}
-                      max={100}
+                      min={5}
+                      max={50}
                       step={1}
                       className="w-full mt-2"
                       onValueChange={handleRiskChange}
                     />
                     <p className="mt-2 text-xs text-gray-600">
-                      Adjust the risk index to match your desired portfolio risk level. A higher value indicates a more aggressive risk profile.
+                      Adjust the returns to match your desired portfolio returns. A higher value indicates a more aggressive risk profile.
                     </p>
                   </CardContent>
                 </Card>

@@ -21,133 +21,93 @@ import {
 
 const chartData = [
     {
-        name: 'axis',
+        name: 'Information Technology',
         children: [
-            { name: 'Axes', size: 1302 },
-            { name: 'Axis', size: 24593 },
-            { name: 'AxisGridLine', size: 652 },
-            { name: 'AxisLabel', size: 636 },
-            { name: 'CartesianAxes', size: 6703 },
+            { name: 'Software', size: 13402 },
+            { name: 'Hardware', size: 24593 },
+            { name: 'Semiconductors', size: 12052 },
+            { name: 'IT Services', size: 18360 },
         ],
     },
     {
-        name: 'controls',
+        name: 'Health Care',
         children: [
-            { name: 'AnchorControl', size: 2138 },
-            { name: 'ClickControl', size: 3824 },
-            { name: 'Control', size: 1353 },
-            { name: 'ControlList', size: 4665 },
-            { name: 'DragControl', size: 2649 },
-            { name: 'ExpandControl', size: 2832 },
-            { name: 'HoverControl', size: 4896 },
-            { name: 'IControl', size: 763 },
-            { name: 'PanZoomControl', size: 5222 },
-            { name: 'SelectionControl', size: 7862 },
-            { name: 'TooltipControl', size: 8435 },
+            { name: 'Pharmaceuticals', size: 18622 },
+            { name: 'Biotechnology', size: 11345 },
+            { name: 'Health Care Equipment', size: 8734 },
+            { name: 'Health Care Services', size: 17685 },
         ],
     },
     {
-        name: 'data',
+        name: 'Energy',
         children: [
-            { name: 'Data', size: 20544 },
-            { name: 'DataList', size: 19788 },
-            { name: 'DataSprite', size: 10349 },
-            { name: 'EdgeSprite', size: 3301 },
-            { name: 'NodeSprite', size: 19382 },
-            {
-                name: 'render',
-                children: [
-                    { name: 'ArrowType', size: 698 },
-                    { name: 'EdgeRenderer', size: 5569 },
-                    { name: 'IRenderer', size: 353 },
-                    { name: 'ShapeRenderer', size: 2247 },
-                ],
-            },
-            { name: 'ScaleBinding', size: 11275 },
-            { name: 'Tree', size: 7147 },
-            { name: 'TreeBuilder', size: 9930 },
+            { name: 'Oil & Gas', size: 22584 },
+            { name: 'Renewable Energy', size: 13432 },
+            { name: 'Energy Equipment', size: 15484 },
         ],
     },
     {
-        name: 'events',
+        name: 'Communication Services',
         children: [
-            { name: 'DataEvent', size: 7313 },
-            { name: 'SelectionEvent', size: 6880 },
-            { name: 'TooltipEvent', size: 3701 },
-            { name: 'VisualizationEvent', size: 2117 },
+            { name: 'Media', size: 18372 },
+            { name: 'Telecommunication', size: 17841 },
+            { name: 'Entertainment', size: 11273 },
         ],
     },
     {
-        name: 'legend',
+        name: 'Consumer Discretionary',
         children: [
-            { name: 'Legend', size: 20859 },
-            { name: 'LegendItem', size: 4614 },
-            { name: 'LegendRange', size: 10530 },
+            { name: 'Retail', size: 21389 },
+            { name: 'Automobiles', size: 15432 },
+            { name: 'Luxury Goods', size: 9823 },
         ],
     },
     {
-        name: 'operator',
+        name: 'Consumer Staples',
         children: [
-            {
-                name: 'distortion',
-                children: [
-                    { name: 'BifocalDistortion', size: 4461 },
-                    { name: 'Distortion', size: 6314 },
-                    { name: 'FisheyeDistortion', size: 3444 },
-                ],
-            },
-            {
-                name: 'encoder',
-                children: [
-                    { name: 'ColorEncoder', size: 3179 },
-                    { name: 'Encoder', size: 4060 },
-                    { name: 'PropertyEncoder', size: 4138 },
-                    { name: 'ShapeEncoder', size: 1690 },
-                    { name: 'SizeEncoder', size: 1830 },
-                ],
-            },
-            {
-                name: 'filter',
-                children: [
-                    { name: 'FisheyeTreeFilter', size: 5219 },
-                    { name: 'GraphDistanceFilter', size: 3165 },
-                    { name: 'VisibilityFilter', size: 3509 },
-                ],
-            },
-            { name: 'IOperator', size: 1286 },
-            {
-                name: 'label',
-                children: [
-                    { name: 'Labeler', size: 9956 },
-                    { name: 'RadialLabeler', size: 3899 },
-                    { name: 'StackedAreaLabeler', size: 3202 },
-                ],
-            },
-            {
-                name: 'layout',
-                children: [
-                    { name: 'AxisLayout', size: 6725 },
-                    { name: 'BundledEdgeRouter', size: 3727 },
-                    { name: 'CircleLayout', size: 9317 },
-                    { name: 'CirclePackingLayout', size: 12003 },
-                    { name: 'DendrogramLayout', size: 4853 },
-                    { name: 'ForceDirectedLayout', size: 8411 },
-                    { name: 'IcicleTreeLayout', size: 4864 },
-                    { name: 'IndentedTreeLayout', size: 3174 },
-                    { name: 'Layout', size: 7881 },
-                    { name: 'NodeLinkTreeLayout', size: 12870 },
-                    { name: 'PieLayout', size: 2728 },
-                    { name: 'RadialTreeLayout', size: 12348 },
-                    { name: 'RandomLayout', size: 870 },
-                    { name: 'StackedAreaLayout', size: 9121 },
-                    { name: 'TreeMapLayout', size: 9191 },
-                ],
-            },
-            { name: 'Operator', size: 2490 },
-            { name: 'OperatorList', size: 5248 },
-            { name: 'OperatorSequence', size: 4190 },
-            { name: 'OperatorSwitch', size: 2581 },
-            { name: 'SortOperator', size: 2023 },
+            { name: 'Food Products', size: 24389 },
+            { name: 'Beverages', size: 14523 },
+            { name: 'Household Products', size: 9841 },
+        ],
+    },
+    {
+        name: 'Financials',
+        children: [
+            { name: 'Banks', size: 32768 },
+            { name: 'Insurance', size: 17632 },
+            { name: 'Investment Funds', size: 13942 },
+        ],
+    },
+    {
+        name: 'Industrials',
+        children: [
+            { name: 'Aerospace & Defense', size: 19872 },
+            { name: 'Construction', size: 12782 },
+            { name: 'Manufacturing', size: 17653 },
+        ],
+    },
+    {
+        name: 'Materials',
+        children: [
+            { name: 'Chemicals', size: 19683 },
+            { name: 'Metals & Mining', size: 17438 },
+            { name: 'Packaging', size: 11523 },
+        ],
+    },
+    {
+        name: 'Real Estate',
+        children: [
+            { name: 'Residential', size: 16572 },
+            { name: 'Commercial', size: 23748 },
+            { name: 'REITs', size: 19845 },
+        ],
+    },
+    {
+        name: 'Utilities',
+        children: [
+            { name: 'Electric Utilities', size: 27365 },
+            { name: 'Water Utilities', size: 14532 },
+            { name: 'Renewable Utilities', size: 12845 },
         ],
     },
 ];
@@ -166,7 +126,9 @@ interface CustomizedContentProps {
     name: string;
 }
 
-const COLORS = ['#8889DD', '#9597E4', '#8DC77B', '#A5D297', '#E2CF45', '#F8C12D'];
+const COLORS = [
+    '#8889DD', '#1597E4', '#5DC77B', '#A5D297', '#E2CF45', '#F8C12D', '#FF6347', '#4682B4', '#32CD32', '#FFD700', '#FF69B4'
+];
 
 class CustomizedContent extends PureComponent<CustomizedContentProps> {
     render() {
@@ -226,10 +188,10 @@ export function TreeGraph() {
                     config={chartConfig}
                     className="aspect-auto h-[310px] w-full"
                 >
-                    <ResponsiveContainer width="100%" height="100%">
-                        <Treemap width={400} height={200} data={chartData} dataKey="size" aspectRatio={4 / 3} stroke="#fff" fill="#8884d8" />
-                    </ResponsiveContainer>
                     {/* <ResponsiveContainer width="100%" height="100%">
+                        <Treemap width={400} height={200} data={chartData} dataKey="size" aspectRatio={4 / 3} stroke="#fff" fill="#8884d8" />
+                    </ResponsiveContainer> */}
+                    <ResponsiveContainer width="100%" height="100%">
                         <Treemap
                             width={400}
                             height={200}
@@ -239,7 +201,7 @@ export function TreeGraph() {
                             fill="#8884d8"
                             content={<CustomizedContent colors={COLORS} />}
                         />
-                    </ResponsiveContainer> */}
+                    </ResponsiveContainer>
                 </ChartContainer>
             </CardContent>
             <CardFooter>
