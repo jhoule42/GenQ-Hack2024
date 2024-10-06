@@ -154,7 +154,21 @@ const chartData = [
 
 const COLORS = ['#8889DD', '#9597E4', '#8DC77B', '#A5D297', '#E2CF45', '#F8C12D'];
 
-class CustomizedContent extends PureComponent {
+interface CustomizedContentProps {
+    root: any;
+    depth: number;
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    index: number;
+    payload: any;
+    colors: string[];
+    rank: number;
+    name: string;
+}
+
+class CustomizedContent extends PureComponent<CustomizedContentProps> {
     render() {
         const { root, depth, x, y, width, height, index, payload, colors, rank, name } = this.props;
 
