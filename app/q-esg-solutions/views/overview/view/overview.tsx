@@ -1,11 +1,17 @@
-import { AreaGraph } from '../area-graph';
-import { BarGraph } from '../bar-graph';
-import { PieGraph } from '../pie-graph';
-import { CalendarDateRangePicker } from '@/components/date-range-picker';
+'use client';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import PageContainer from '@/components/layout/page-container';
-import { RecentSales } from '../recent-sales';
 import { Button } from '@/components/ui/button';
 import { Slider } from "@/components/ui/slider";
+import { Input } from "@/components/ui/input";
+import { Icons } from '@/components/icons';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger
+} from '@/components/ui/tooltip';
 import {
   Card,
   CardContent,
@@ -14,184 +20,189 @@ import {
   CardTitle
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import Link from 'next/link';
+import QuantumLoader from '@/components/ui/quantum-loader';
 
 export default function OverViewPage() {
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+  const Icon = Icons.info;
+  const [esgScore, setEsgScore] = useState(33);
+  const [riskIndex, setRiskIndex] = useState(33);
+
+  const handleEsgChange = (value: number[]) => {
+    setEsgScore(value[0]);
+  };
+
+  const handleRiskChange = (value: number[]) => {
+    setRiskIndex(value[0]);
+  };
+
+  const handleOptimizeClick = () => {
+    setLoading(true); 
+    setTimeout(() => {
+      setLoading(false);
+      router.push('/dashboard/results');
+    }, 5000);
+  };
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gray-900">
+        <QuantumLoader />
+      </div>
+    );
+  }
+
   return (
     <PageContainer scrollable={true}>
-      <div className="space-y-2">
-        <div className="flex items-center justify-between space-y-2">
+      <div className="space-y-6">
+        <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold tracking-tight">
-            Hi, Welcome back 👋
+            Welcome Q-Impact User 👋
           </h2>
-          <div className="hidden items-center space-x-2 md:flex">
-            <CalendarDateRangePicker />
-            <Button>Download</Button>
-          </div>
         </div>
-        <Tabs defaultValue="overview" className="space-y-4">
+
+        <Tabs defaultValue="overview" className="space-y-6">
           <TabsList>
-            <TabsTrigger value="overview">Overview</TabsTrigger>
+            <TabsTrigger value="overview">
+              Basic
+            </TabsTrigger>
             <TabsTrigger value="analytics" disabled>
-              Analytics
+              Premium
             </TabsTrigger>
           </TabsList>
-          <TabsContent value="overview" className="space-y-4">
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-                <Card>
-                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">
-                        Select Assets to Analyze
+
+          <TooltipProvider>
+            <TabsContent value="overview" className="space-y-6">
+              <div className="grid gap-6">
+                <Card className="w-full">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-sm font-medium flex items-center">
+                      Investment Capital (USD):
+                      <Tooltip>
+                        <TooltipTrigger>
+                          <Icon className="ml-2 w-4 h-4" aria-label="Information icon" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>
+                            Funds, in USD, allocated to portfolio optimzation.
+                          </p>
+                        </TooltipContent>
+                      </Tooltip>
                     </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                    <p>Menu Soon...</p>
-                    </CardContent>
+                  </CardHeader>
+                  <CardContent>
+                    <Input
+                      id="funds_to_allocate"
+                      placeholder="100000 USD"
+                      required
+                      className="w-full"
+                    />
+                  </CardContent>
                 </Card>
-                <Card>
-                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">
-                        Desired ESG Impact Score
+              </div>
+
+              <div className="grid gap-6 md:grid-cols-2">
+                <Card className="w-full">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-sm font-medium flex items-center">
+                      Desired ESG Impact Score
+                      <Tooltip>
+                        <TooltipTrigger>
+                          <Icon className="ml-2 w-4 h-4" aria-label="Information icon" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>
+                            ESG score reflects the enterprise's impact across environment,
+                            social, and governance criteria. A higher score indicates a more
+                            positive ESG impact.
+                          </p>
+                        </TooltipContent>
+                      </Tooltip>
                     </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                    <Slider defaultValue={[33]} max={100} step={1} />
-                    </CardContent>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex items-center justify-between">
+                      <label htmlFor="esg-slider" className="text-xs font-medium text-gray-700">
+                        Minimal (0)
+                      </label>
+                      <span id="esg-score" className="text-sm font-bold text-teal-600">
+                        {esgScore} 
+                      </span>
+                      <label htmlFor="esg-slider" className="text-xs font-medium text-gray-700">
+                        Maximum (100)
+                      </label>
+                    </div>
+                    <Slider
+                      id="esg-slider"
+                      value={[esgScore]}
+                      max={100}
+                      step={1}
+                      className="w-full mt-2"
+                      onValueChange={(value: any) => setEsgScore(value)}
+                    />
+                    <p className="mt-2 text-xs text-gray-600">
+                      Adjust the ESG impact score to reflect the desired impact of the portfolio on environmental, social, and governance factors.
+                    </p>
+                  </CardContent>
                 </Card>
-                <Card>
-                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">
-                        Desired Risk
+
+                <Card className="w-full">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-sm font-medium flex items-center">
+                      Desired Returns:
+                      <Tooltip>
+                        <TooltipTrigger>
+                          <Icon className="ml-2 w-4 h-4" aria-label="Information icon" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>
+                            The risk index represents the desired risk tolerance in the portfolio. A lower index indicates a more conservative approach, while a higher index indicates a higher tolerance for risk.
+                          </p>
+                        </TooltipContent>
+                      </Tooltip>
                     </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                    <Slider defaultValue={[33]} max={100} step={1} />
-                    </CardContent>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex items-center justify-between">
+                      <label htmlFor="risk-slider" className="text-xs font-medium text-gray-700">
+                        Low Return (5%)
+                      </label>
+                      <span id="risk-index" className="text-sm font-bold text-red-600">
+                        {riskIndex}
+                      </span>
+                      <label htmlFor="risk-slider" className="text-xs font-medium text-gray-700">
+                        High Return (50%)
+                      </label>
+                    </div>
+                    <Slider
+                      id="risk-slider"
+                      value={[riskIndex]}
+                      min={5}
+                      max={50}
+                      step={1}
+                      className="w-full mt-2"
+                      onValueChange={handleRiskChange}
+                    />
+                    <p className="mt-2 text-xs text-gray-600">
+                      Adjust the returns to match your desired portfolio returns. A higher value indicates a more aggressive risk profile.
+                    </p>
+                  </CardContent>
                 </Card>
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">
-                    Total Revenue
-                  </CardTitle>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="h-4 w-4 text-muted-foreground"
-                  >
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">$45,231.89</div>
-                  <p className="text-xs text-muted-foreground">
-                    +20.1% from last month
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">
-                    Subscriptions
-                  </CardTitle>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="h-4 w-4 text-muted-foreground"
-                  >
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
-                  </svg>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">+2350</div>
-                  <p className="text-xs text-muted-foreground">
-                    +180.1% from last month
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Sales</CardTitle>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="h-4 w-4 text-muted-foreground"
-                  >
-                    <rect width="20" height="14" x="2" y="5" rx="2" />
-                    <path d="M2 10h20" />
-                  </svg>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">+12,234</div>
-                  <p className="text-xs text-muted-foreground">
-                    +19% from last month
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">
-                    Active Now
-                  </CardTitle>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="h-4 w-4 text-muted-foreground"
-                  >
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                  </svg>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">+573</div>
-                  <p className="text-xs text-muted-foreground">
-                    +201 since last hour
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7">
-              <div className="col-span-4">
-                <BarGraph />
               </div>
-              <Card className="col-span-4 md:col-span-3">
-                <CardHeader>
-                  <CardTitle>Recent Sales</CardTitle>
-                  <CardDescription>
-                    You made 265 sales this month.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <RecentSales />
-                </CardContent>
-              </Card>
-              <div className="col-span-4">
-                <AreaGraph />
+
+              <div className="flex justify-center">
+                <Button
+                  onClick={handleOptimizeClick}
+                  className="px-16 py-6 rounded-xl bg-teal-500 text-white text-2xl font-extrabold transition duration-200 hover:bg-white hover:text-teal-500 border-2 border-transparent hover:border-teal-500 w-full md:w-auto"
+                  asChild
+                >
+                  <Link href="/dashboard/results">Optimize Portfolio</Link>
+                </Button>
               </div>
-              <div className="col-span-4 md:col-span-3">
-                <PieGraph />
-              </div>
-            </div>
-          </TabsContent>
+            </TabsContent>
+          </TooltipProvider>
         </Tabs>
       </div>
     </PageContainer>

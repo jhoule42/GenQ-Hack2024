@@ -11,6 +11,7 @@ import {
     FileText,
     HelpCircle,
     Image,
+    Info,
     Laptop,
     LayoutDashboardIcon,
     Loader2,
@@ -25,6 +26,7 @@ import {
     Settings,
     SunMedium,
     Trash,
+    TreeDeciduous,
     Twitter,
     User,
     UserCircle2Icon,
@@ -33,13 +35,13 @@ import {
     X
   } from 'lucide-react';
   
-  export type Icon = LucideIcon;
   
   export const Icons = {
     dashboard: LayoutDashboardIcon,
     logo: Command,
     login: LogIn,
     close: X,
+    info: Info,
     product: LucideShoppingBag,
     spinner: Loader2,
     kanban: CircuitBoardIcon,
@@ -62,9 +64,10 @@ import {
     help: HelpCircle,
     pizza: Pizza,
     sun: SunMedium,
+    tree: TreeDeciduous,
     moon: Moon,
     laptop: Laptop,
-    gitHub: ({ ...props }: LucideProps) => (
+    gitHub: ({ ...props }: any) => (
       <svg
         aria-hidden="true"
         focusable="false"

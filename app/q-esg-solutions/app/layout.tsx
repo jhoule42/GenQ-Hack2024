@@ -1,17 +1,15 @@
 import Providers from '@/components/layout/providers';
 import { Toaster } from '@/components/ui/toaster';
-//import '@uploadthing/react/styles.css';
 import type { Metadata } from 'next';
 import NextTopLoader from 'nextjs-toploader';
 import { Inter } from 'next/font/google';
 import './globals.css';
-//import { auth } from '@/auth';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Q-ESG Solutions',
-  description: 'Basic dashboard with Next.js and Shadcn for V1'
+  title: 'Q-Impact',
+  description: 'Empowering Sustainable Investments with Quantum Precision'
 };
 
 export default async function RootLayout({
@@ -19,7 +17,6 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  //const session = await auth();
   return (
     <html lang="en">
       <body
@@ -27,7 +24,6 @@ export default async function RootLayout({
         suppressHydrationWarning={true}
       >
         <NextTopLoader showSpinner={false} />
-        {/* <Providers session={session}> */}
         <Providers>
           <Toaster />
           {children}

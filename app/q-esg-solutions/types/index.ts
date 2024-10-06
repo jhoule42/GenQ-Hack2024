@@ -30,3 +30,24 @@ export interface FooterItem {
 export type MainNavItem = NavItemWithOptionalChildren;
 
 export type SidebarNavItem = NavItemWithChildren;
+
+interface StockData {
+  id: string;
+  name: string;
+  allocation: number;
+  esg_index: {
+    animalTesting: boolean;
+    coal: boolean;
+    furLeather: boolean;
+    gmo: boolean;
+    palmOil: boolean;
+    nuclear: boolean;
+    pesticides: boolean;
+  },
+  esg_score: number,
+}
+
+export interface OptimizedPortfolioData {
+  stock_data: StockData[];
+  //stock_allocation: Stock Allocation
+}
