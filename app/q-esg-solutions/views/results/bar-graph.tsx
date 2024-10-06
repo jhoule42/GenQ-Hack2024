@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import * as React from 'react';
 import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts';
@@ -17,156 +17,125 @@ import {
   ChartTooltipContent
 } from '@/components/ui/chart';
 
-export const description = 'An interactive bar chart';
-
 const chartData = [
-  { date: '2024-04-01', desktop: 222, mobile: 150 },
-  { date: '2024-04-02', desktop: 97, mobile: 180 },
-  { date: '2024-04-03', desktop: 167, mobile: 120 },
-  { date: '2024-04-04', desktop: 242, mobile: 260 },
-  { date: '2024-04-05', desktop: 373, mobile: 290 },
-  { date: '2024-04-06', desktop: 301, mobile: 340 },
-  { date: '2024-04-07', desktop: 245, mobile: 180 },
-  { date: '2024-04-08', desktop: 409, mobile: 320 },
-  { date: '2024-04-09', desktop: 59, mobile: 110 },
-  { date: '2024-04-10', desktop: 261, mobile: 190 },
-  { date: '2024-04-11', desktop: 327, mobile: 350 },
-  { date: '2024-04-12', desktop: 292, mobile: 210 },
-  { date: '2024-04-13', desktop: 342, mobile: 380 },
-  { date: '2024-04-14', desktop: 137, mobile: 220 },
-  { date: '2024-04-15', desktop: 120, mobile: 170 },
-  { date: '2024-04-16', desktop: 138, mobile: 190 },
-  { date: '2024-04-17', desktop: 446, mobile: 360 },
-  { date: '2024-04-18', desktop: 364, mobile: 410 },
-  { date: '2024-04-19', desktop: 243, mobile: 180 },
-  { date: '2024-04-20', desktop: 89, mobile: 150 },
-  { date: '2024-04-21', desktop: 137, mobile: 200 },
-  { date: '2024-04-22', desktop: 224, mobile: 170 },
-  { date: '2024-04-23', desktop: 138, mobile: 230 },
-  { date: '2024-04-24', desktop: 387, mobile: 290 },
-  { date: '2024-04-25', desktop: 215, mobile: 250 },
-  { date: '2024-04-26', desktop: 75, mobile: 130 },
-  { date: '2024-04-27', desktop: 383, mobile: 420 },
-  { date: '2024-04-28', desktop: 122, mobile: 180 },
-  { date: '2024-04-29', desktop: 315, mobile: 240 },
-  { date: '2024-04-30', desktop: 454, mobile: 380 },
-  { date: '2024-05-01', desktop: 165, mobile: 220 },
-  { date: '2024-05-02', desktop: 293, mobile: 310 },
-  { date: '2024-05-03', desktop: 247, mobile: 190 },
-  { date: '2024-05-04', desktop: 385, mobile: 420 },
-  { date: '2024-05-05', desktop: 481, mobile: 390 },
-  { date: '2024-05-06', desktop: 498, mobile: 520 },
-  { date: '2024-05-07', desktop: 388, mobile: 300 },
-  { date: '2024-05-08', desktop: 149, mobile: 210 },
-  { date: '2024-05-09', desktop: 227, mobile: 180 },
-  { date: '2024-05-10', desktop: 293, mobile: 330 },
-  { date: '2024-05-11', desktop: 335, mobile: 270 },
-  { date: '2024-05-12', desktop: 197, mobile: 240 },
-  { date: '2024-05-13', desktop: 197, mobile: 160 },
-  { date: '2024-05-14', desktop: 448, mobile: 490 },
-  { date: '2024-05-15', desktop: 473, mobile: 380 },
-  { date: '2024-05-16', desktop: 338, mobile: 400 },
-  { date: '2024-05-17', desktop: 499, mobile: 420 },
-  { date: '2024-05-18', desktop: 315, mobile: 350 },
-  { date: '2024-05-19', desktop: 235, mobile: 180 },
-  { date: '2024-05-20', desktop: 177, mobile: 230 },
-  { date: '2024-05-21', desktop: 82, mobile: 140 },
-  { date: '2024-05-22', desktop: 81, mobile: 120 },
-  { date: '2024-05-23', desktop: 252, mobile: 290 },
-  { date: '2024-05-24', desktop: 294, mobile: 220 },
-  { date: '2024-05-25', desktop: 201, mobile: 250 },
-  { date: '2024-05-26', desktop: 213, mobile: 170 },
-  { date: '2024-05-27', desktop: 420, mobile: 460 },
-  { date: '2024-05-28', desktop: 233, mobile: 190 },
-  { date: '2024-05-29', desktop: 78, mobile: 130 },
-  { date: '2024-05-30', desktop: 340, mobile: 280 },
-  { date: '2024-05-31', desktop: 178, mobile: 230 },
-  { date: '2024-06-01', desktop: 178, mobile: 200 },
-  { date: '2024-06-02', desktop: 470, mobile: 410 },
-  { date: '2024-06-03', desktop: 103, mobile: 160 },
-  { date: '2024-06-04', desktop: 439, mobile: 380 },
-  { date: '2024-06-05', desktop: 88, mobile: 140 },
-  { date: '2024-06-06', desktop: 294, mobile: 250 },
-  { date: '2024-06-07', desktop: 323, mobile: 370 },
-  { date: '2024-06-08', desktop: 385, mobile: 320 },
-  { date: '2024-06-09', desktop: 438, mobile: 480 },
-  { date: '2024-06-10', desktop: 155, mobile: 200 },
-  { date: '2024-06-11', desktop: 92, mobile: 150 },
-  { date: '2024-06-12', desktop: 492, mobile: 420 },
-  { date: '2024-06-13', desktop: 81, mobile: 130 },
-  { date: '2024-06-14', desktop: 426, mobile: 380 },
-  { date: '2024-06-15', desktop: 307, mobile: 350 },
-  { date: '2024-06-16', desktop: 371, mobile: 310 },
-  { date: '2024-06-17', desktop: 475, mobile: 520 },
-  { date: '2024-06-18', desktop: 107, mobile: 170 },
-  { date: '2024-06-19', desktop: 341, mobile: 290 },
-  { date: '2024-06-20', desktop: 408, mobile: 450 },
-  { date: '2024-06-21', desktop: 169, mobile: 210 },
-  { date: '2024-06-22', desktop: 317, mobile: 270 },
-  { date: '2024-06-23', desktop: 480, mobile: 530 },
-  { date: '2024-06-24', desktop: 132, mobile: 180 },
-  { date: '2024-06-25', desktop: 141, mobile: 190 },
-  { date: '2024-06-26', desktop: 434, mobile: 380 },
-  { date: '2024-06-27', desktop: 448, mobile: 490 },
-  { date: '2024-06-28', desktop: 149, mobile: 200 },
-  { date: '2024-06-29', desktop: 103, mobile: 160 },
-  { date: '2024-06-30', desktop: 446, mobile: 400 }
+  { company: 'ESG 1', esgScore: 120 },
+  { company: 'ESG 2', esgScore: 125 },
+  { company: 'ESG 3', esgScore: 130 },
+  { company: 'ESG 4', esgScore: 135 },
+  { company: 'ESG 5', esgScore: 140 },
+  { company: 'ESG 6', esgScore: 145 },
+  { company: 'ESG 7', esgScore: 150 },
+  { company: 'ESG 8', esgScore: 155 },
+  { company: 'ESG 9', esgScore: 160 },
+  { company: 'ESG 10', esgScore: 165 },
+  { company: 'ESG 11', esgScore: 170 },
+  { company: 'ESG 12', esgScore: 175 },
+  { company: 'ESG 13', esgScore: 180 },
+  { company: 'ESG 14', esgScore: 185 },
+  { company: 'ESG 15', esgScore: 190 },
+  { company: 'ESG 16', esgScore: 195 },
+  { company: 'ESG 17', esgScore: 200 },
+  { company: 'ESG 18', esgScore: 205 },
+  { company: 'ESG 19', esgScore: 210 },
+  { company: 'ESG 20', esgScore: 215 },
+  { company: 'ESG 21', esgScore: 220 },
+  { company: 'ESG 22', esgScore: 225 },
+  { company: 'ESG 23', esgScore: 230 },
+  { company: 'ESG 24', esgScore: 235 },
+  { company: 'ESG 25', esgScore: 240 },
+  { company: 'ESG 26', esgScore: 245 },
+  { company: 'ESG 27', esgScore: 250 },
+  { company: 'ESG 28', esgScore: 255 },
+  { company: 'ESG 29', esgScore: 260 },
+  { company: 'ESG 30', esgScore: 265 },
+  { company: 'ESG 31', esgScore: 270 },
+  { company: 'ESG 32', esgScore: 275 },
+  { company: 'ESG 33', esgScore: 280 },
+  { company: 'ESG 34', esgScore: 285 },
+  { company: 'ESG 35', esgScore: 290 },
+  { company: 'ESG 36', esgScore: 295 },
+  { company: 'ESG 37', esgScore: 300 },
+  { company: 'ESG 38', esgScore: 305 },
+  { company: 'ESG 39', esgScore: 310 },
+  { company: 'ESG 40', esgScore: 315 },
+  { company: 'ESG 41', esgScore: 320 },
+  { company: 'ESG 42', esgScore: 325 },
+  { company: 'ESG 43', esgScore: 330 },
+  { company: 'ESG 44', esgScore: 335 },
+  { company: 'ESG 45', esgScore: 340 },
+  { company: 'ESG 46', esgScore: 345 },
+  { company: 'ESG 47', esgScore: 350 },
+  { company: 'ESG 48', esgScore: 355 },
+  { company: 'ESG 49', esgScore: 360 },
+  { company: 'ESG 50', esgScore: 365 },
+  { company: 'ESG 51', esgScore: 370 },
+  { company: 'ESG 52', esgScore: 375 },
+  { company: 'ESG 53', esgScore: 380 },
+  { company: 'ESG 54', esgScore: 385 },
+  { company: 'ESG 55', esgScore: 390 },
+  { company: 'ESG 56', esgScore: 395 },
+  { company: 'ESG 57', esgScore: 400 },
+  { company: 'ESG 58', esgScore: 405 },
+  { company: 'ESG 59', esgScore: 410 },
+  { company: 'ESG 60', esgScore: 415 },
+  { company: 'ESG 61', esgScore: 420 },
+  { company: 'ESG 62', esgScore: 425 },
+  { company: 'ESG 63', esgScore: 430 },
+  { company: 'ESG 64', esgScore: 435 },
+  { company: 'ESG 65', esgScore: 440 },
+  { company: 'ESG 66', esgScore: 445 },
+  { company: 'ESG 67', esgScore: 450 },
+  { company: 'ESG 68', esgScore: 455 },
+  { company: 'ESG 69', esgScore: 460 },
+  { company: 'ESG 70', esgScore: 465 },
+  { company: 'ESG 71', esgScore: 470 },
+  { company: 'ESG 72', esgScore: 475 },
+  { company: 'ESG 73', esgScore: 480 },
+  { company: 'ESG 74', esgScore: 485 },
+  { company: 'ESG 75', esgScore: 490 },
+  { company: 'ESG 76', esgScore: 495 },
+  { company: 'ESG 77', esgScore: 500 },
+  { company: 'ESG 78', esgScore: 505 },
+  { company: 'ESG 79', esgScore: 510 },
+  { company: 'ESG 80', esgScore: 515 },
+  { company: 'ESG 81', esgScore: 520 },
+  { company: 'ESG 82', esgScore: 525 },
+  { company: 'ESG 83', esgScore: 530 },
+  { company: 'ESG 84', esgScore: 535 },
+  { company: 'ESG 85', esgScore: 540 },
+  { company: 'ESG 86', esgScore: 545 },
+  { company: 'ESG 87', esgScore: 550 },
+  { company: 'ESG 88', esgScore: 555 },
+  { company: 'ESG 89', esgScore: 560 },
+  { company: 'ESG 90', esgScore: 565 },
+  { company: 'ESG 91', esgScore: 570 },
+  { company: 'ESG 92', esgScore: 575 },
+  { company: 'ESG 93', esgScore: 580 },
+  { company: 'ESG 94', esgScore: 585 },
+  { company: 'ESG 95', esgScore: 590 },
+  { company: 'ESG 96', esgScore: 595 },
+  { company: 'ESG 97', esgScore: 600 },
+  { company: 'ESG 98', esgScore: 605 },
+  { company: 'ESG 99', esgScore: 610 },
+  { company: 'ESG 100', esgScore: 615 },
 ];
 
 const chartConfig = {
-  views: {
-    label: 'Page Views'
-  },
-  desktop: {
-    label: 'Desktop',
-    color: 'hsl(var(--chart-1))'
-  },
-  mobile: {
-    label: 'Mobile',
-    color: 'hsl(var(--chart-2))'
+  esgScore: {
+    label: 'ESG Score',
+    color: 'hsl(138, 60%, 70%)'
   }
 } satisfies ChartConfig;
 
 export function BarGraph() {
-  const [activeChart, setActiveChart] =
-    React.useState<keyof typeof chartConfig>('desktop');
-
-  const total = React.useMemo(
-    () => ({
-      desktop: chartData.reduce((acc, curr) => acc + curr.desktop, 0),
-      mobile: chartData.reduce((acc, curr) => acc + curr.mobile, 0)
-    }),
-    []
-  );
-
   return (
     <Card>
       <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row">
         <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6">
           <CardTitle>Portfolio Holdings by ESG Score</CardTitle>
           <CardDescription>
-            Showing holdings according to ascending ESG scores
+            Companies arranged in ascending order of their ESG score.
           </CardDescription>
-        </div>
-        <div className="flex">
-          {['desktop', 'mobile'].map((key) => {
-            const chart = key as keyof typeof chartConfig;
-            return (
-              <button
-                key={chart}
-                data-active={activeChart === chart}
-                className="relative flex flex-1 flex-col justify-center gap-1 border-t px-6 py-4 text-left even:border-l data-[active=true]:bg-muted/50 sm:border-l sm:border-t-0 sm:px-8 sm:py-6"
-                onClick={() => setActiveChart(chart)}
-              >
-                <span className="text-xs text-muted-foreground">
-                  {chartConfig[chart].label}
-                </span>
-                <span className="text-lg font-bold leading-none sm:text-3xl">
-                  {total[key as keyof typeof total].toLocaleString()}
-                </span>
-              </button>
-            );
-          })}
         </div>
       </CardHeader>
       <CardContent className="px-2 sm:p-6">
@@ -183,35 +152,24 @@ export function BarGraph() {
           >
             <CartesianGrid vertical={false} />
             <XAxis
-              dataKey="date"
+              dataKey="company"
               tickLine={false}
               axisLine={false}
               tickMargin={8}
               minTickGap={32}
-              tickFormatter={(value) => {
-                const date = new Date(value);
-                return date.toLocaleDateString('en-US', {
-                  month: 'short',
-                  day: 'numeric'
-                });
-              }}
             />
             <ChartTooltip
               content={
                 <ChartTooltipContent
                   className="w-[150px]"
-                  nameKey="views"
+                  nameKey="esgScore"
                   labelFormatter={(value) => {
-                    return new Date(value).toLocaleDateString('en-US', {
-                      month: 'short',
-                      day: 'numeric',
-                      year: 'numeric'
-                    });
+                    return `ESG: ${value}`;
                   }}
                 />
               }
             />
-            <Bar dataKey={activeChart} fill={`var(--color-${activeChart})`} />
+            <Bar dataKey="esgScore" fill="hsl(120, 100%, 50%)" />
           </BarChart>
         </ChartContainer>
       </CardContent>

@@ -11,7 +11,7 @@ import PageContainer from '@/components/layout/page-container';
 import { Button } from '@/components/ui/button';
 import { Slider } from "@/components/ui/slider";
 import { Input } from "@/components/ui/input";
-// import spy_dt from '@/public/s';
+// import { spyCSV } from "@/constants/SPY";
 import {
   Card,
   CardContent,
@@ -172,54 +172,56 @@ export default function ResultsPage() {
   const [dataSPY, setDataSPY] = useState<MSCIStockData[]>([]);
   const [dataMSCI, setDataMSCI] = useState<MSCIStockData[]>([]);
 
-  useEffect(() => {
-    const fetchCSVData = async () => {
-      try {
-        // Fetch SPY CSV data
-        const responseSPY = await fetch('/public/SPY.csv');
-        const csvSPY = await responseSPY.text();
-        const parsedSPY = await parseCSV(csvSPY);
+  // useEffect(() => {
+  //   const fetchCSVData = async () => {
+  //     try {
+  //       // Fetch SPY CSV data
+  //       const responseSPY = await fetch('/public/SPY.csv');
+  //       const csvSPY = await responseSPY.text();
+  //       const parsedSPY = await parseCSV(csvSPY);
 
-        // Format parsed data
-        const formattedSPY = formatChartData(parsedSPY as StockData[]);
-        setDataSPY(formattedSPY); // Set formatted SPY data
+  //       // Format parsed data
+  //       const formattedSPY = formatChartData(parsedSPY as StockData[]);
+  //       setDataSPY(formattedSPY); // Set formatted SPY data
 
-        // Fetch MSCI CSV data
-        const responseMSCI = await fetch('/public/MSCI_social.csv');
-        const csvMSCI = await responseMSCI.text();
-        const parsedMSCI = await parseCSV(csvMSCI);
+  //       console.log('response SP', formattedSPY)
 
-        // Format parsed data
-        const formattedMSCI = formatChartData(parsedMSCI as StockData[]);
-        setDataMSCI(formattedMSCI); // Set formatted MSCI data
-      } catch (error) {
-        console.error("Error fetching or parsing CSV data:", error);
-      }
-    };
+  //       // Fetch MSCI CSV data
+  //       const responseMSCI = await fetch('/public/MSCI_social.csv');
+  //       const csvMSCI = await responseMSCI.text();
+  //       const parsedMSCI = await parseCSV(csvMSCI);
 
-    fetchCSVData();
-  }, []);
+  //       // Format parsed data
+  //       const formattedMSCI = formatChartData(parsedMSCI as StockData[]);
+  //       setDataMSCI(formattedMSCI); // Set formatted MSCI data
+  //     } catch (error) {
+  //       console.error("Error fetching or parsing CSV data:", error);
+  //     }
+  //   };
 
-  useEffect(() => {
-    const fetchPredictedImpact = async () => {
-      const response = await fetch('/api/cohere', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ stocks: mockStocks }),
-      });
+  //   fetchCSVData();
+  // }, []);
 
-      if (response.ok) {
-        const data = await response.json();
-        setPredictedImpact(data.texts);
-      } else {
-        console.error('Failed to fetch predicted impact:', response.statusText);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchPredictedImpact = async () => {
+  //     const response = await fetch('/api/cohere', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({ stocks: mockStocks }),
+  //     });
 
-    fetchPredictedImpact();
-  }, []);
+  //     if (response.ok) {
+  //       const data = await response.json();
+  //       setPredictedImpact(data.texts);
+  //     } else {
+  //       console.error('Failed to fetch predicted impact:', response.statusText);
+  //     }
+  //   };
+
+  //   fetchPredictedImpact();
+  // }, []);
 
 
   return (
@@ -332,7 +334,7 @@ export default function ResultsPage() {
                 </CardContent>
               </Card>
             </div>
-            <Card>
+            {/* <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">
                   Predicted Environmental Impact
@@ -351,15 +353,22 @@ export default function ResultsPage() {
                 </svg>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">+573</div>
+                <div className="text-2xl font-bold">You support the polar bears!</div>
                 <p className="text-xs text-muted-foreground">
-                  COHERE GENERATED CUASE AND EFFECTS
+                  Your action towards responsible investments has saved the habitat of many polar bears.
+                </p>
+                <div className="text-2xl font-bold">You saved the black rhinoceros from extinction!</div>
+                <p className="text-xs text-muted-foreground">
+                  Continued investment in ESG indexes has reflected in the environment.
                 </p>
               </CardContent>
-            </Card>
+            </Card> */}
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7">
-              <div className="col-span-4">
+              {/* <div className="col-span-4">
                 <BarGraph />
+              </div> */}
+              <div className="col-span-4">
+                <LineGraph />
               </div>
               <div className="col-span-4 md:col-span-3">
                 <TreeGraph />
@@ -373,40 +382,11 @@ export default function ResultsPage() {
             </div>
           </TabsContent>
           <TabsContent value="historical" className="space-y-4">
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7">
+            <div className="">
               <div className="col-span-4">
-                <LineGraph dataSPY={dataSPY} dataMSCI={dataMSCI} />
+                {/* <LineGraph dataSPY={dataSPY} dataMSCI={dataMSCI} /> */}
+                <LineGraph />
               </div>
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">
-                    Predicted Return and Savings
-                  </CardTitle>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="h-4 w-4 text-muted-foreground"
-                  >
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                  </svg>
-                </CardHeader>
-                <CardContent>
-                  {predictedImpact.length > 0 ? (
-                    <ul className="list-disc pl-5">
-                      {predictedImpact.map((impact, index) => (
-                        <li key={index} className="text-sm text-muted-foreground">{impact}</li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p className="text-sm text-muted-foreground">Loading predicted impacts...</p>
-                  )}
-                </CardContent>
-              </Card>
             </div>
           </TabsContent>
         </Tabs>

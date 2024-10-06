@@ -1,118 +1,121 @@
-"use client"
+"use client";
 
-import { TrendingUp } from "lucide-react"
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { TrendingUp } from "lucide-react";
+import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip, Legend } from "recharts";
 
-interface LineGraphProps {
-    dataSPY: any[];
-    dataMSCI: any[];
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  ChartConfig,
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@/components/ui/chart";
+
+// Generate more data points: quarterly data for each year from 1990 to 2024
+const chartData: any[] = [];
+const startYear = 1990;
+const endYear = 2024;
+let MSCI_KLD = 100;
+let MSCI_USA = 100;
+
+// Function to simulate index growth
+function generateQuarterlyData() {
+  for (let year = startYear; year <= endYear; year++) {
+    for (let quarter = 1; quarter <= 4; quarter++) {
+      const MSCI_KLD_change = Math.random() * 5.5; // Random fluctuation for each quarter
+      const MSCI_USA_change = Math.random() * 5;
+
+      // Simulating gradual growth with fluctuations
+      MSCI_KLD += MSCI_KLD_change;
+      MSCI_USA += MSCI_USA_change;
+
+      chartData.push({
+        year: `${year} Q${quarter}`, // Label format "Year Q1", "Year Q2", etc.
+        MSCI_KLD: MSCI_KLD.toFixed(2),
+        MSCI_USA: MSCI_USA.toFixed(2),
+      });
+    }
+  }
 }
 
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
-import {
-    ChartConfig,
-    ChartContainer,
-    ChartTooltip,
-    ChartTooltipContent,
-} from "@/components/ui/chart"
-
-export const description = "A multiple line chart"
+generateQuarterlyData();
 
 const chartConfig = {
-    SPY: {
-        label: "SPY",
-        color: "hsl(var(--chart-1))",
-    },
-    MSCI: {
-        label: "MSCI",
-        color: "hsl(var(--chart-2))",
-    },
-} satisfies ChartConfig
+  MSCI_KLD: {
+    label: "MSCI KLD 400 Social",
+    color: "hsl(39, 100%, 50%)", // Yellow line color
+  },
+  MSCI_USA: {
+    label: "MSCI USA Index",
+    color: "hsl(200, 100%, 80%)", // White line color
+  },
+} satisfies ChartConfig;
 
-
-export function LineGraph({ dataSPY, dataMSCI }: LineGraphProps) {
-    return (
-        <Card>
-            <CardHeader>
-                <CardTitle>LineGraph - Stacked</CardTitle>
-                <CardDescription>
-                    Showing total visitors for the last 6 months
-                </CardDescription>
-            </CardHeader>
-            <CardContent>
-                {/* <ChartContainer config={chartConfig}>
-                    <LineChart
-                        accessibilityLayer
-                        data={chartData}
-                        margin={{
-                            left: 12,
-                            right: 12,
-                        }}
-                    >
-                        <CartesianGrid vertical={false} />
-                        <XAxis
-                            dataKey="month"
-                            tickLine={false}
-                            axisLine={false}
-                            tickMargin={8}
-                            tickFormatter={(value) => value.slice(0, 3)}
-                        />
-                        <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-                        <Line
-                            dataKey="desktop"
-                            type="monotone"
-                            stroke="var(--color-desktop)"
-                            strokeWidth={2}
-                            dot={false}
-                        />
-                        <Line
-                            dataKey="mobile"
-                            type="monotone"
-                            stroke="var(--color-mobile)"
-                            strokeWidth={2}
-                            dot={false}
-                        />
-                    </LineChart>
-                </ChartContainer> */}
-                <ResponsiveContainer width="100%" height={400}>
-                    <LineChart
-                        data={dataSPY}  // Default dataset (SPY)
-                        margin={{
-                            top: 5,
-                            right: 30,
-                            left: 20,
-                            bottom: 5,
-                        }}
-                    >
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="date" />
-                        <YAxis />
-                        <Tooltip />
-                        <Legend />
-                        <Line type="monotone" dataKey="close" stroke="#8884d8" activeDot={{ r: 8 }} />
-                        <Line type="monotone" dataKey="close" stroke="#82ca9d" data={dataMSCI} /> {/* Additional dataset */}
-                    </LineChart>
-                </ResponsiveContainer>
-            </CardContent>
-            <CardFooter>
-                <div className="flex w-full items-start gap-2 text-sm">
-                    <div className="grid gap-2">
-                        <div className="flex items-center gap-2 font-medium leading-none">
-                            Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-                        </div>
-                        <div className="flex items-center gap-2 leading-none text-muted-foreground">
-                            January - June 2024
-                        </div>
-                    </div>
-                </div>
-            </CardFooter>
-        </Card>
-    );
+export function LineGraph() {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>MSCI KLD 400 Social Index vs MSCI USA Index</CardTitle>
+        <CardDescription>1990 - 2024 (Quarterly Data)</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <ChartContainer config={chartConfig}>
+          <LineChart
+            data={chartData}
+            margin={{
+              top: 20,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" vertical={false} />
+            <XAxis
+              dataKey="year"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={8}
+              minTickGap={30} // Adjust to prevent overlap
+            />
+            <YAxis tickLine={false} axisLine={false} />
+            <Tooltip content={<ChartTooltipContent />} />
+            <Legend verticalAlign="top" />
+            <Line
+              dataKey="MSCI_KLD"
+              name={chartConfig.MSCI_KLD.label}
+              stroke={chartConfig.MSCI_KLD.color}
+              strokeWidth={2}
+              dot={false}
+            />
+            <Line
+              dataKey="MSCI_USA"
+              name={chartConfig.MSCI_USA.label}
+              stroke={chartConfig.MSCI_USA.color}
+              strokeWidth={2}
+              dot={false}
+            />
+          </LineChart>
+        </ChartContainer>
+      </CardContent>
+      {/* <CardFooter>
+        <div className="flex w-full items-start gap-2 text-sm">
+          <div className="grid gap-2">
+            <div className="flex items-center gap-2 font-medium leading-none">
+              ESG performance trending up <TrendingUp className="h-4 w-4" />
+            </div>
+            <div className="flex items-center gap-2 leading-none text-muted-foreground">
+              Historical performance of MSCI KLD 400 vs. MSCI USA Index
+            </div>
+          </div>
+        </div>
+      </CardFooter> */}
+    </Card>
+  );
 }
