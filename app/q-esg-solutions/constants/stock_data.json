@@ -1,0 +1,3412 @@
+[
+    {
+        "id": "AVGO",
+        "name": "Broadcom Inc.",
+        "allocation": 2.7755575615628914e-17,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 7.34,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 6.64,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 31,
+                "peerEnvironmentPerformance": {
+                    "min": 2.3,
+                    "avg": 7.116333333333333,
+                    "max": 15.25
+                },
+                "peerEsgScorePerformance": {
+                    "min": 9.63,
+                    "avg": 19.696451612903225,
+                    "max": 32.31
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.03,
+                    "avg": 6.245666666666667,
+                    "max": 8.74
+                },
+                "peerGroup": "Semiconductors",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.3548387096774193,
+                    "max": 3.0
+                },
+                "peerSocialPerformance": {
+                    "min": 1.96,
+                    "avg": 5.915,
+                    "max": 9.16
+                },
+                "percentile": 27.91,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 6.0,
+                "tobacco": false,
+                "totalEsg": 19.98
+            }
+        }
+    },
+    {
+        "id": "PEP",
+        "name": "PepsiCo, Inc.",
+        "allocation": 0.0454037197870309,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": true,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 7.27,
+                "esgPerformance": "AVG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 5.16,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 92,
+                "peerEnvironmentPerformance": {
+                    "min": 3.42,
+                    "avg": 10.622727272727273,
+                    "max": 22.94
+                },
+                "peerEsgScorePerformance": {
+                    "min": 13.65,
+                    "avg": 28.132608695652166,
+                    "max": 48.32
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.59,
+                    "avg": 6.302272727272728,
+                    "max": 11.9
+                },
+                "peerGroup": "Food Products",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.119565217391304,
+                    "max": 4.0
+                },
+                "peerSocialPerformance": {
+                    "min": 4.35,
+                    "avg": 11.042499999999993,
+                    "max": 20.86
+                },
+                "percentile": 36.32,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Social Supply Chain Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 9.63,
+                "tobacco": false,
+                "totalEsg": 22.06
+            }
+        }
+    },
+    {
+        "id": "INTC",
+        "name": "Intel Corporation",
+        "allocation": 0.07209814699681519,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 4.93,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 6.62,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 31,
+                "peerEnvironmentPerformance": {
+                    "min": 2.3,
+                    "avg": 7.116333333333333,
+                    "max": 15.25
+                },
+                "peerEsgScorePerformance": {
+                    "min": 9.63,
+                    "avg": 19.696451612903225,
+                    "max": 32.31
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.03,
+                    "avg": 6.245666666666667,
+                    "max": 8.74
+                },
+                "peerGroup": "Semiconductors",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.3548387096774193,
+                    "max": 3.0
+                },
+                "peerSocialPerformance": {
+                    "min": 1.96,
+                    "avg": 5.915,
+                    "max": 9.16
+                },
+                "percentile": 23.69,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents",
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 7.32,
+                "tobacco": false,
+                "totalEsg": 18.87
+            }
+        }
+    },
+    {
+        "id": "AAPL",
+        "name": "Apple Inc.",
+        "allocation": 0.019964987126546926,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 0.46,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 9.37,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 55,
+                "peerEnvironmentPerformance": {
+                    "min": 0.11,
+                    "avg": 3.0588235294117636,
+                    "max": 9.54
+                },
+                "peerEsgScorePerformance": {
+                    "min": 6.37,
+                    "avg": 15.565636363636367,
+                    "max": 27.47
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.44,
+                    "avg": 6.928431372549018,
+                    "max": 11.13
+                },
+                "peerGroup": "Technology Hardware",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.5454545454545454,
+                    "max": 4.0
+                },
+                "peerSocialPerformance": {
+                    "min": 1.75,
+                    "avg": 5.536862745098038,
+                    "max": 9.76
+                },
+                "percentile": 17.82,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Social Supply Chain Incidents",
+                    "Customer Incidents",
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 7.39,
+                "tobacco": false,
+                "totalEsg": 17.22
+            }
+        }
+    },
+    {
+        "id": "ACN",
+        "name": "Accenture plc",
+        "allocation": 0.03566166983697816,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 0.82,
+                "esgPerformance": "LAG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 4.41,
+                "highestControversy": 2.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 105,
+                "peerEnvironmentPerformance": {
+                    "min": 0.07,
+                    "avg": 2.5702912621359224,
+                    "max": 5.3
+                },
+                "peerEsgScorePerformance": {
+                    "min": 9.84,
+                    "avg": 18.17809523809525,
+                    "max": 49.81
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.47,
+                    "avg": 6.753495145631067,
+                    "max": 34.36
+                },
+                "peerGroup": "Software & Services",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.5333333333333334,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 4.61,
+                    "avg": 8.862038834951454,
+                    "max": 21.09
+                },
+                "percentile": 2.63,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 4.61,
+                "tobacco": false,
+                "totalEsg": 9.84
+            }
+        }
+    },
+    {
+        "id": "ADP",
+        "name": "Automatic Data Processing, Inc.",
+        "allocation": 0.035126047601937924,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 2.8,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 5.49,
+                "highestControversy": 1.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 105,
+                "peerEnvironmentPerformance": {
+                    "min": 0.07,
+                    "avg": 2.5702912621359224,
+                    "max": 5.3
+                },
+                "peerEsgScorePerformance": {
+                    "min": 9.84,
+                    "avg": 18.17809523809525,
+                    "max": 49.81
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.47,
+                    "avg": 6.753495145631067,
+                    "max": 34.36
+                },
+                "peerGroup": "Software & Services",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.5333333333333334,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 4.61,
+                    "avg": 8.862038834951454,
+                    "max": 21.09
+                },
+                "percentile": 8.36,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Employee Incidents",
+                    "Customer Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 5.54,
+                "tobacco": false,
+                "totalEsg": 13.82
+            }
+        }
+    },
+    {
+        "id": "AMAT",
+        "name": "Applied Materials, Inc.",
+        "allocation": 0.00165060286663158,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 4.49,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 5.28,
+                "highestControversy": 1.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 31,
+                "peerEnvironmentPerformance": {
+                    "min": 2.3,
+                    "avg": 7.116333333333333,
+                    "max": 15.25
+                },
+                "peerEsgScorePerformance": {
+                    "min": 9.63,
+                    "avg": 19.696451612903225,
+                    "max": 32.31
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.03,
+                    "avg": 6.245666666666667,
+                    "max": 8.74
+                },
+                "peerGroup": "Semiconductors",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.3548387096774193,
+                    "max": 3.0
+                },
+                "peerSocialPerformance": {
+                    "min": 1.96,
+                    "avg": 5.915,
+                    "max": 9.16
+                },
+                "percentile": 6.15,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 2.97,
+                "tobacco": false,
+                "totalEsg": 12.74
+            }
+        }
+    },
+    {
+        "id": "AMZN",
+        "name": "Amazon.com, Inc.",
+        "allocation": 0.005528579764985199,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 6.0,
+                "esgPerformance": "OUT_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 9.22,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 55,
+                "peerEnvironmentPerformance": {
+                    "min": 0.08,
+                    "avg": 2.9348936170212765,
+                    "max": 7.32
+                },
+                "peerEsgScorePerformance": {
+                    "min": 9.65,
+                    "avg": 16.908909090909088,
+                    "max": 30.61
+                },
+                "peerGovernancePerformance": {
+                    "min": 2.36,
+                    "avg": 5.247872340425532,
+                    "max": 9.22
+                },
+                "peerGroup": "Retailing",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.0,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 4.0,
+                    "avg": 8.324893617021274,
+                    "max": 15.39
+                },
+                "percentile": 71.14,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Employee Incidents",
+                    "Social Supply Chain Incidents",
+                    "Customer Incidents",
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 15.39,
+                "tobacco": false,
+                "totalEsg": 30.61
+            }
+        }
+    },
+    {
+        "id": "BA",
+        "name": "The Boeing Company",
+        "allocation": 0.06500609453240822,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": true,
+                "environmentPercentile": null,
+                "environmentScore": 8.84,
+                "esgPerformance": "OUT_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 8.29,
+                "highestControversy": 4.0,
+                "maxAge": 86400,
+                "militaryContract": true,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 23,
+                "peerEnvironmentPerformance": {
+                    "min": 5.76,
+                    "avg": 8.221304347826086,
+                    "max": 12.01
+                },
+                "peerEsgScorePerformance": {
+                    "min": 20.37,
+                    "avg": 29.226956521739137,
+                    "max": 39.6
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.99,
+                    "avg": 6.978695652173914,
+                    "max": 9.41
+                },
+                "peerGroup": "Aerospace & Defense",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.347826086956522,
+                    "max": 4.0
+                },
+                "peerSocialPerformance": {
+                    "min": 8.68,
+                    "avg": 14.027826086956521,
+                    "max": 22.48
+                },
+                "percentile": 91.3,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 22.48,
+                "tobacco": false,
+                "totalEsg": 39.6
+            }
+        }
+    },
+    {
+        "id": "BAC",
+        "name": "Bank of America Corporation",
+        "allocation": 0.00782996948714361,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 1.73,
+                "esgPerformance": "AVG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 11.48,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 175,
+                "peerEnvironmentPerformance": {
+                    "min": 0.14,
+                    "avg": 1.6089759036144577,
+                    "max": 3.0
+                },
+                "peerEsgScorePerformance": {
+                    "min": 12.09,
+                    "avg": 23.408342857142873,
+                    "max": 44.83
+                },
+                "peerGovernancePerformance": {
+                    "min": 5.44,
+                    "avg": 11.317048192771079,
+                    "max": 19.69
+                },
+                "peerGroup": "Banks",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.217142857142857,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 3.81,
+                    "avg": 10.25265060240964,
+                    "max": 22.64
+                },
+                "percentile": 62.26,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents",
+                    "Society & Community Incidents",
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 15.09,
+                "tobacco": false,
+                "totalEsg": 28.3
+            }
+        }
+    },
+    {
+        "id": "C",
+        "name": "Citigroup Inc.",
+        "allocation": 0.0,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 1.8,
+                "esgPerformance": "AVG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 13.69,
+                "highestControversy": 4.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 175,
+                "peerEnvironmentPerformance": {
+                    "min": 0.14,
+                    "avg": 1.6089759036144577,
+                    "max": 3.0
+                },
+                "peerEsgScorePerformance": {
+                    "min": 12.09,
+                    "avg": 23.408342857142873,
+                    "max": 44.83
+                },
+                "peerGovernancePerformance": {
+                    "min": 5.44,
+                    "avg": 11.317048192771079,
+                    "max": 19.69
+                },
+                "peerGroup": "Banks",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.217142857142857,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 3.81,
+                    "avg": 10.25265060240964,
+                    "max": 22.64
+                },
+                "percentile": 65.93,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 13.75,
+                "tobacco": false,
+                "totalEsg": 29.24
+            }
+        }
+    },
+    {
+        "id": "CME",
+        "name": "CME Group Inc.",
+        "allocation": 0.03641529009592216,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 2.13,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 9.19,
+                "highestControversy": 1.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 86,
+                "peerEnvironmentPerformance": {
+                    "min": 0.0,
+                    "avg": 1.2733333333333328,
+                    "max": 3.64
+                },
+                "peerEsgScorePerformance": {
+                    "min": 6.65,
+                    "avg": 19.73976744186046,
+                    "max": 36.92
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.39,
+                    "avg": 10.240617283950622,
+                    "max": 19.14
+                },
+                "peerGroup": "Diversified Financials",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.5,
+                    "max": 4.0
+                },
+                "peerSocialPerformance": {
+                    "min": 2.02,
+                    "avg": 8.300740740740746,
+                    "max": 14.61
+                },
+                "percentile": 19.85,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents",
+                    "Business Ethics Incidents",
+                    "Governance Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 6.48,
+                "tobacco": false,
+                "totalEsg": 17.8
+            }
+        }
+    },
+    {
+        "id": "CSCO",
+        "name": "Cisco Systems, Inc.",
+        "allocation": 0.04587240357471695,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 0.45,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 6.51,
+                "highestControversy": 2.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 55,
+                "peerEnvironmentPerformance": {
+                    "min": 0.11,
+                    "avg": 3.0588235294117636,
+                    "max": 9.54
+                },
+                "peerEsgScorePerformance": {
+                    "min": 6.37,
+                    "avg": 15.565636363636367,
+                    "max": 27.47
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.44,
+                    "avg": 6.928431372549018,
+                    "max": 11.13
+                },
+                "peerGroup": "Technology Hardware",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.5454545454545454,
+                    "max": 4.0
+                },
+                "peerSocialPerformance": {
+                    "min": 1.75,
+                    "avg": 5.536862745098038,
+                    "max": 9.76
+                },
+                "percentile": 8.46,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Social Supply Chain Incidents",
+                    "Customer Incidents",
+                    "Society & Community Incidents",
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 6.9,
+                "tobacco": false,
+                "totalEsg": 13.87
+            }
+        }
+    },
+    {
+        "id": "DIS",
+        "name": "The Walt Disney Company",
+        "allocation": 0.03150105132884855,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 0.04,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 6.71,
+                "highestControversy": 2.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 38,
+                "peerEnvironmentPerformance": {
+                    "min": 0.01,
+                    "avg": 0.4944117647058822,
+                    "max": 3.75
+                },
+                "peerEsgScorePerformance": {
+                    "min": 5.53,
+                    "avg": 14.429210526315789,
+                    "max": 22.2
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.35,
+                    "avg": 6.715294117647059,
+                    "max": 10.09
+                },
+                "peerGroup": "Media",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.6842105263157894,
+                    "max": 4.0
+                },
+                "peerSocialPerformance": {
+                    "min": 1.91,
+                    "avg": 7.041470588235294,
+                    "max": 12.47
+                },
+                "percentile": 13.18,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Employee Incidents",
+                    "Social Supply Chain Incidents",
+                    "Customer Incidents",
+                    "Society & Community Incidents",
+                    "Business Ethics Incidents",
+                    "Governance Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 8.96,
+                "tobacco": false,
+                "totalEsg": 15.7
+            }
+        }
+    },
+    {
+        "id": "ECL",
+        "name": "Ecolab Inc.",
+        "allocation": 0.003850828534014566,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": true,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 8.54,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 5.27,
+                "highestControversy": 2.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 78,
+                "peerEnvironmentPerformance": {
+                    "min": 4.31,
+                    "avg": 12.954358974358971,
+                    "max": 21.33
+                },
+                "peerEsgScorePerformance": {
+                    "min": 8.64,
+                    "avg": 25.816666666666663,
+                    "max": 37.78
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.35,
+                    "avg": 6.875128205128205,
+                    "max": 10.91
+                },
+                "peerGroup": "Chemicals",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.6538461538461537,
+                    "max": 4.0
+                },
+                "peerSocialPerformance": {
+                    "min": 0.77,
+                    "avg": 5.988461538461542,
+                    "max": 13.0
+                },
+                "percentile": 27.49,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 6.05,
+                "tobacco": false,
+                "totalEsg": 19.86
+            }
+        }
+    },
+    {
+        "id": "ETN",
+        "name": "Eaton Corporation plc",
+        "allocation": 0.0008191895514432571,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 5.46,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 5.72,
+                "highestControversy": 1.0,
+                "maxAge": 86400,
+                "militaryContract": true,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 18,
+                "peerEnvironmentPerformance": {
+                    "min": 1.57,
+                    "avg": 5.3500000000000005,
+                    "max": 9.09
+                },
+                "peerEsgScorePerformance": {
+                    "min": 11.32,
+                    "avg": 20.28055555555556,
+                    "max": 30.51
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.44,
+                    "avg": 6.62529411764706,
+                    "max": 9.89
+                },
+                "peerGroup": "Electrical Equipment",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.6111111111111112,
+                    "max": 3.0
+                },
+                "peerSocialPerformance": {
+                    "min": 4.22,
+                    "avg": 7.703529411764706,
+                    "max": 10.15
+                },
+                "percentile": 20.26,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Operations Incidents",
+                    "Employee Incidents",
+                    "Customer Incidents",
+                    "Society & Community Incidents",
+                    "Business Ethics Incidents",
+                    "Governance Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 6.76,
+                "tobacco": false,
+                "totalEsg": 17.94
+            }
+        }
+    },
+    {
+        "id": "FCX",
+        "name": "Freeport-McMoRan Inc.",
+        "allocation": 0.011859905975509647,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 15.26,
+                "esgPerformance": "OUT_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 6.4,
+                "highestControversy": 4.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 26,
+                "peerEnvironmentPerformance": {
+                    "min": 9.0,
+                    "avg": 14.761923076923072,
+                    "max": 21.76
+                },
+                "peerEsgScorePerformance": {
+                    "min": 17.31,
+                    "avg": 32.83,
+                    "max": 52.11
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.64,
+                    "avg": 7.237307692307693,
+                    "max": 12.88
+                },
+                "peerGroup": "Diversified Metals",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 3.1538461538461537,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 4.38,
+                    "avg": 10.832307692307692,
+                    "max": 18.87
+                },
+                "percentile": 74.44,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Operations Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 9.96,
+                "tobacco": false,
+                "totalEsg": 31.61
+            }
+        }
+    },
+    {
+        "id": "GE",
+        "name": "GE Aerospace",
+        "allocation": 1.734723475976807e-17,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": true,
+                "catholic": true,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 14.24,
+                "esgPerformance": "LEAD_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 10.9,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": true,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 37,
+                "peerEnvironmentPerformance": {
+                    "min": 9.14,
+                    "avg": 15.426857142857141,
+                    "max": 22.61
+                },
+                "peerEsgScorePerformance": {
+                    "min": 21.06,
+                    "avg": 38.02270270270269,
+                    "max": 57.59
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.55,
+                    "avg": 9.180285714285713,
+                    "max": 12.86
+                },
+                "peerGroup": "Industrial Conglomerates",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.0,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 5.04,
+                    "avg": 13.128000000000002,
+                    "max": 22.26
+                },
+                "percentile": 92.22,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents",
+                    "Society & Community Incidents",
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 15.41,
+                "tobacco": false,
+                "totalEsg": 40.55
+            }
+        }
+    },
+    {
+        "id": "GILD",
+        "name": "Gilead Sciences, Inc.",
+        "allocation": 0.036139011113915834,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": true,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 1.0,
+                "esgPerformance": "AVG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 7.62,
+                "highestControversy": 2.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 83,
+                "peerEnvironmentPerformance": {
+                    "min": 0.11,
+                    "avg": 2.018607594936709,
+                    "max": 5.35
+                },
+                "peerEsgScorePerformance": {
+                    "min": 11.86,
+                    "avg": 24.20120481927711,
+                    "max": 41.43
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.69,
+                    "avg": 8.228987341772154,
+                    "max": 13.45
+                },
+                "peerGroup": "Pharmaceuticals",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.0,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 4.89,
+                    "avg": 13.569240506329118,
+                    "max": 21.38
+                },
+                "percentile": 39.94,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents",
+                    "Society & Community Incidents",
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 14.34,
+                "tobacco": false,
+                "totalEsg": 22.97
+            }
+        }
+    },
+    {
+        "id": "GM",
+        "name": "General Motors Company",
+        "allocation": 0.012561170667556913,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 9.83,
+                "esgPerformance": "AVG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 7.19,
+                "highestControversy": 4.0,
+                "maxAge": 86400,
+                "militaryContract": true,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 37,
+                "peerEnvironmentPerformance": {
+                    "min": 2.13,
+                    "avg": 6.886216216216217,
+                    "max": 12.06
+                },
+                "peerEsgScorePerformance": {
+                    "min": 12.18,
+                    "avg": 25.234324324324326,
+                    "max": 37.9
+                },
+                "peerGovernancePerformance": {
+                    "min": 5.73,
+                    "avg": 8.134054054054054,
+                    "max": 11.24
+                },
+                "peerGroup": "Automobiles",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.324324324324324,
+                    "max": 4.0
+                },
+                "peerSocialPerformance": {
+                    "min": 3.28,
+                    "avg": 10.213783783783784,
+                    "max": 17.95
+                },
+                "percentile": 63.16,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 11.48,
+                "tobacco": false,
+                "totalEsg": 28.5
+            }
+        }
+    },
+    {
+        "id": "HON",
+        "name": "Honeywell International Inc.",
+        "allocation": 0.03759145547395529,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": true,
+                "environmentPercentile": null,
+                "environmentScore": 10.99,
+                "esgPerformance": "AVG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 7.04,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": true,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 37,
+                "peerEnvironmentPerformance": {
+                    "min": 9.14,
+                    "avg": 15.426857142857141,
+                    "max": 22.61
+                },
+                "peerEsgScorePerformance": {
+                    "min": 21.06,
+                    "avg": 38.02270270270269,
+                    "max": 57.59
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.55,
+                    "avg": 9.180285714285713,
+                    "max": 12.86
+                },
+                "peerGroup": "Industrial Conglomerates",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.0,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 5.04,
+                    "avg": 13.128000000000002,
+                    "max": 22.26
+                },
+                "percentile": 63.65,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Operations Incidents",
+                    "Society & Community Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 10.59,
+                "tobacco": false,
+                "totalEsg": 28.62
+            }
+        }
+    },
+    {
+        "id": "IBM",
+        "name": "International Business Machines Corporation",
+        "allocation": 0.0,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 1.78,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 6.14,
+                "highestControversy": 2.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 105,
+                "peerEnvironmentPerformance": {
+                    "min": 0.07,
+                    "avg": 2.5702912621359224,
+                    "max": 5.3
+                },
+                "peerEsgScorePerformance": {
+                    "min": 9.84,
+                    "avg": 18.17809523809525,
+                    "max": 49.81
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.47,
+                    "avg": 6.753495145631067,
+                    "max": 34.36
+                },
+                "peerGroup": "Software & Services",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.5333333333333334,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 4.61,
+                    "avg": 8.862038834951454,
+                    "max": 21.09
+                },
+                "percentile": 9.09,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Employee Incidents",
+                    "Customer Incidents",
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 6.22,
+                "tobacco": false,
+                "totalEsg": 14.14
+            }
+        }
+    },
+    {
+        "id": "JPM",
+        "name": "JPMorgan Chase & Co.",
+        "allocation": 0.009044486596764234,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 1.11,
+                "esgPerformance": "AVG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 11.7,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 175,
+                "peerEnvironmentPerformance": {
+                    "min": 0.14,
+                    "avg": 1.6089759036144577,
+                    "max": 3.0
+                },
+                "peerEsgScorePerformance": {
+                    "min": 12.09,
+                    "avg": 23.408342857142873,
+                    "max": 44.83
+                },
+                "peerGovernancePerformance": {
+                    "min": 5.44,
+                    "avg": 11.317048192771079,
+                    "max": 19.69
+                },
+                "peerGroup": "Banks",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.217142857142857,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 3.81,
+                    "avg": 10.25265060240964,
+                    "max": 22.64
+                },
+                "percentile": 66.02,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Employee Incidents",
+                    "Customer Incidents",
+                    "Society & Community Incidents",
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 16.45,
+                "tobacco": false,
+                "totalEsg": 29.26
+            }
+        }
+    },
+    {
+        "id": "LLY",
+        "name": "Eli Lilly and Company",
+        "allocation": 0.0,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": true,
+                "catholic": true,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 2.54,
+                "esgPerformance": "AVG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 9.14,
+                "highestControversy": 2.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 83,
+                "peerEnvironmentPerformance": {
+                    "min": 0.11,
+                    "avg": 2.018607594936709,
+                    "max": 5.35
+                },
+                "peerEsgScorePerformance": {
+                    "min": 11.86,
+                    "avg": 24.20120481927711,
+                    "max": 41.43
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.69,
+                    "avg": 8.228987341772154,
+                    "max": 13.45
+                },
+                "peerGroup": "Pharmaceuticals",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.0,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 4.89,
+                    "avg": 13.569240506329118,
+                    "max": 21.38
+                },
+                "percentile": 45.9,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents",
+                    "Society & Community Incidents",
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 12.6,
+                "tobacco": false,
+                "totalEsg": 24.28
+            }
+        }
+    },
+    {
+        "id": "LMT",
+        "name": "Lockheed Martin Corporation",
+        "allocation": 0.011116525785700132,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": true,
+                "environmentPercentile": null,
+                "environmentScore": 7.96,
+                "esgPerformance": "OUT_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 7.11,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": true,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 23,
+                "peerEnvironmentPerformance": {
+                    "min": 5.76,
+                    "avg": 8.221304347826086,
+                    "max": 12.01
+                },
+                "peerEsgScorePerformance": {
+                    "min": 20.37,
+                    "avg": 29.226956521739137,
+                    "max": 39.6
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.99,
+                    "avg": 6.978695652173914,
+                    "max": 9.41
+                },
+                "peerGroup": "Aerospace & Defense",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.347826086956522,
+                    "max": 4.0
+                },
+                "peerSocialPerformance": {
+                    "min": 8.68,
+                    "avg": 14.027826086956521,
+                    "max": 22.48
+                },
+                "percentile": 69.64,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents",
+                    "Society & Community Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 15.11,
+                "tobacco": false,
+                "totalEsg": 30.18
+            }
+        }
+    },
+    {
+        "id": "MCO",
+        "name": "Moody's Corporation",
+        "allocation": 0.005383204118420215,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 1.61,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 8.12,
+                "highestControversy": 2.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 86,
+                "peerEnvironmentPerformance": {
+                    "min": 0.0,
+                    "avg": 1.2733333333333328,
+                    "max": 3.64
+                },
+                "peerEsgScorePerformance": {
+                    "min": 6.65,
+                    "avg": 19.73976744186046,
+                    "max": 36.92
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.39,
+                    "avg": 10.240617283950622,
+                    "max": 19.14
+                },
+                "peerGroup": "Diversified Financials",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.5,
+                    "max": 4.0
+                },
+                "peerSocialPerformance": {
+                    "min": 2.02,
+                    "avg": 8.300740740740746,
+                    "max": 14.61
+                },
+                "percentile": 13.52,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents",
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 6.09,
+                "tobacco": false,
+                "totalEsg": 15.82
+            }
+        }
+    },
+    {
+        "id": "MDLZ",
+        "name": "Mondelez International, Inc.",
+        "allocation": 0.04077638394527926,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": true,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 7.23,
+                "esgPerformance": "AVG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 5.41,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 92,
+                "peerEnvironmentPerformance": {
+                    "min": 3.42,
+                    "avg": 10.622727272727273,
+                    "max": 22.94
+                },
+                "peerEsgScorePerformance": {
+                    "min": 13.65,
+                    "avg": 28.132608695652166,
+                    "max": 48.32
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.59,
+                    "avg": 6.302272727272728,
+                    "max": 11.9
+                },
+                "peerGroup": "Food Products",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.119565217391304,
+                    "max": 4.0
+                },
+                "peerSocialPerformance": {
+                    "min": 4.35,
+                    "avg": 11.042499999999993,
+                    "max": 20.86
+                },
+                "percentile": 36.13,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Environmental Supply Chain Incidents",
+                    "Social Supply Chain Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 9.39,
+                "tobacco": false,
+                "totalEsg": 22.02
+            }
+        }
+    },
+    {
+        "id": "META",
+        "name": "Meta Platforms, Inc.",
+        "allocation": 0.0,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 2.71,
+                "esgPerformance": "OUT_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 10.29,
+                "highestControversy": 4.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 105,
+                "peerEnvironmentPerformance": {
+                    "min": 0.07,
+                    "avg": 2.5702912621359224,
+                    "max": 5.3
+                },
+                "peerEsgScorePerformance": {
+                    "min": 9.84,
+                    "avg": 18.17809523809525,
+                    "max": 49.81
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.47,
+                    "avg": 6.753495145631067,
+                    "max": 34.36
+                },
+                "peerGroup": "Software & Services",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.5333333333333334,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 4.61,
+                    "avg": 8.862038834951454,
+                    "max": 21.09
+                },
+                "percentile": 81.17,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 21.09,
+                "tobacco": false,
+                "totalEsg": 34.08
+            }
+        }
+    },
+    {
+        "id": "MMM",
+        "name": "3M Company",
+        "allocation": 0.0,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": true,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 17.22,
+                "esgPerformance": "OUT_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 6.54,
+                "highestControversy": 5.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 37,
+                "peerEnvironmentPerformance": {
+                    "min": 9.14,
+                    "avg": 15.426857142857141,
+                    "max": 22.61
+                },
+                "peerEsgScorePerformance": {
+                    "min": 21.06,
+                    "avg": 38.02270270270269,
+                    "max": 57.59
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.55,
+                    "avg": 9.180285714285713,
+                    "max": 12.86
+                },
+                "peerGroup": "Industrial Conglomerates",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.0,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 5.04,
+                    "avg": 13.128000000000002,
+                    "max": 22.26
+                },
+                "percentile": 88.51,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Operations Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 13.59,
+                "tobacco": false,
+                "totalEsg": 37.35
+            }
+        }
+    },
+    {
+        "id": "MS",
+        "name": "Morgan Stanley",
+        "allocation": 0.020598932960477715,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 1.14,
+                "esgPerformance": "AVG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 10.53,
+                "highestControversy": 2.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 86,
+                "peerEnvironmentPerformance": {
+                    "min": 0.0,
+                    "avg": 1.2733333333333328,
+                    "max": 3.64
+                },
+                "peerEsgScorePerformance": {
+                    "min": 6.65,
+                    "avg": 19.73976744186046,
+                    "max": 36.92
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.39,
+                    "avg": 10.240617283950622,
+                    "max": 19.14
+                },
+                "peerGroup": "Diversified Financials",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.5,
+                    "max": 4.0
+                },
+                "peerSocialPerformance": {
+                    "min": 2.02,
+                    "avg": 8.300740740740746,
+                    "max": 14.61
+                },
+                "percentile": 47.11,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents",
+                    "Society & Community Incidents",
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 12.91,
+                "tobacco": false,
+                "totalEsg": 24.58
+            }
+        }
+    },
+    {
+        "id": "MSFT",
+        "name": "Microsoft Corporation",
+        "allocation": 0.016069511988713984,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 1.46,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 6.07,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 105,
+                "peerEnvironmentPerformance": {
+                    "min": 0.07,
+                    "avg": 2.5702912621359224,
+                    "max": 5.3
+                },
+                "peerEsgScorePerformance": {
+                    "min": 9.84,
+                    "avg": 18.17809523809525,
+                    "max": 49.81
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.47,
+                    "avg": 6.753495145631067,
+                    "max": 34.36
+                },
+                "peerGroup": "Software & Services",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.5333333333333334,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 4.61,
+                    "avg": 8.862038834951454,
+                    "max": 21.09
+                },
+                "percentile": 11.36,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 7.53,
+                "tobacco": false,
+                "totalEsg": 15.06
+            }
+        }
+    },
+    {
+        "id": "NKE",
+        "name": "NIKE, Inc.",
+        "allocation": 0.046682369584929856,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 2.98,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 6.65,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 20,
+                "peerEnvironmentPerformance": {
+                    "min": 0.4,
+                    "avg": 1.3678947368421055,
+                    "max": 3.89
+                },
+                "peerEsgScorePerformance": {
+                    "min": 9.41,
+                    "avg": 14.37,
+                    "max": 21.1
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.89,
+                    "avg": 5.514736842105263,
+                    "max": 8.1
+                },
+                "peerGroup": "Textiles & Apparel",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.75,
+                    "max": 3.0
+                },
+                "peerSocialPerformance": {
+                    "min": 3.67,
+                    "avg": 7.135263157894738,
+                    "max": 9.99
+                },
+                "percentile": 26.58,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Employee Incidents",
+                    "Social Supply Chain Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 9.99,
+                "tobacco": false,
+                "totalEsg": 19.61
+            }
+        }
+    },
+    {
+        "id": "NOW",
+        "name": "ServiceNow, Inc.",
+        "allocation": 0.0,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 3.99,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 6.57,
+                "highestControversy": 0.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 105,
+                "peerEnvironmentPerformance": {
+                    "min": 0.07,
+                    "avg": 2.5702912621359224,
+                    "max": 5.3
+                },
+                "peerEsgScorePerformance": {
+                    "min": 9.84,
+                    "avg": 18.17809523809525,
+                    "max": 49.81
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.47,
+                    "avg": 6.753495145631067,
+                    "max": 34.36
+                },
+                "peerGroup": "Software & Services",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.5333333333333334,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 4.61,
+                    "avg": 8.862038834951454,
+                    "max": 21.09
+                },
+                "percentile": 15.89,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 6.04,
+                "tobacco": false,
+                "totalEsg": 16.59
+            }
+        }
+    },
+    {
+        "id": "NVDA",
+        "name": "NVIDIA Corporation",
+        "allocation": 0.0,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 2.3,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 6.34,
+                "highestControversy": 2.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 31,
+                "peerEnvironmentPerformance": {
+                    "min": 2.3,
+                    "avg": 7.116333333333333,
+                    "max": 15.25
+                },
+                "peerEsgScorePerformance": {
+                    "min": 9.63,
+                    "avg": 19.696451612903225,
+                    "max": 32.31
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.03,
+                    "avg": 6.245666666666667,
+                    "max": 8.74
+                },
+                "peerGroup": "Semiconductors",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.3548387096774193,
+                    "max": 3.0
+                },
+                "peerSocialPerformance": {
+                    "min": 1.96,
+                    "avg": 5.915,
+                    "max": 9.16
+                },
+                "percentile": 7.86,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 4.95,
+                "tobacco": false,
+                "totalEsg": 13.59
+            }
+        }
+    },
+    {
+        "id": "OXY",
+        "name": "Occidental Petroleum Corporation",
+        "allocation": 0.06660192507529401,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 24.98,
+                "esgPerformance": "LEAD_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 6.97,
+                "highestControversy": 2.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 67,
+                "peerEnvironmentPerformance": {
+                    "min": 0.03,
+                    "avg": 20.606718750000002,
+                    "max": 34.09
+                },
+                "peerEsgScorePerformance": {
+                    "min": 7.32,
+                    "avg": 38.72223880597015,
+                    "max": 57.74
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.85,
+                    "avg": 8.271249999999998,
+                    "max": 16.54
+                },
+                "peerGroup": "Oil & Gas Producers",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.1194029850746268,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 1.29,
+                    "avg": 9.71890625,
+                    "max": 19.32
+                },
+                "percentile": 93.23,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Operations Incidents",
+                    "Product & Service Incidents",
+                    "Employee Incidents",
+                    "Society & Community Incidents",
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 9.7,
+                "tobacco": false,
+                "totalEsg": 41.66
+            }
+        }
+    },
+    {
+        "id": "PANW",
+        "name": "Palo Alto Networks, Inc.",
+        "allocation": 0.01016790811517628,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 0.7,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 5.6,
+                "highestControversy": 1.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 105,
+                "peerEnvironmentPerformance": {
+                    "min": 0.07,
+                    "avg": 2.5702912621359224,
+                    "max": 5.3
+                },
+                "peerEsgScorePerformance": {
+                    "min": 9.84,
+                    "avg": 18.17809523809525,
+                    "max": 49.81
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.47,
+                    "avg": 6.753495145631067,
+                    "max": 34.36
+                },
+                "peerGroup": "Software & Services",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.5333333333333334,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 4.61,
+                    "avg": 8.862038834951454,
+                    "max": 21.09
+                },
+                "percentile": 8.57,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 7.62,
+                "tobacco": false,
+                "totalEsg": 13.92
+            }
+        }
+    },
+    {
+        "id": "PYPL",
+        "name": "PayPal Holdings, Inc.",
+        "allocation": 0.015391167148466884,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 2.83,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 5.75,
+                "highestControversy": 2.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 105,
+                "peerEnvironmentPerformance": {
+                    "min": 0.07,
+                    "avg": 2.5702912621359224,
+                    "max": 5.3
+                },
+                "peerEsgScorePerformance": {
+                    "min": 9.84,
+                    "avg": 18.17809523809525,
+                    "max": 49.81
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.47,
+                    "avg": 6.753495145631067,
+                    "max": 34.36
+                },
+                "peerGroup": "Software & Services",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.5333333333333334,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 4.61,
+                    "avg": 8.862038834951454,
+                    "max": 21.09
+                },
+                "percentile": 19.71,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents",
+                    "Business Ethics Incidents",
+                    "Governance Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 9.19,
+                "tobacco": false,
+                "totalEsg": 17.77
+            }
+        }
+    },
+    {
+        "id": "RY",
+        "name": "Royal Bank of Canada",
+        "allocation": 0.008623018472263044,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 1.94,
+                "esgPerformance": "AVG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 8.86,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 175,
+                "peerEnvironmentPerformance": {
+                    "min": 0.14,
+                    "avg": 1.6089759036144577,
+                    "max": 3.0
+                },
+                "peerEsgScorePerformance": {
+                    "min": 12.09,
+                    "avg": 23.408342857142873,
+                    "max": 44.83
+                },
+                "peerGovernancePerformance": {
+                    "min": 5.44,
+                    "avg": 11.317048192771079,
+                    "max": 19.69
+                },
+                "peerGroup": "Banks",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.217142857142857,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 3.81,
+                    "avg": 10.25265060240964,
+                    "max": 22.64
+                },
+                "percentile": 46.17,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents",
+                    "Society & Community Incidents",
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 13.55,
+                "tobacco": false,
+                "totalEsg": 24.35
+            }
+        }
+    },
+    {
+        "id": "SBUX",
+        "name": "Starbucks Corporation",
+        "allocation": 0.040024597171275204,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 5.79,
+                "esgPerformance": "AVG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 4.27,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 44,
+                "peerEnvironmentPerformance": {
+                    "min": 0.11,
+                    "avg": 6.141025641025643,
+                    "max": 13.21
+                },
+                "peerEsgScorePerformance": {
+                    "min": 11.58,
+                    "avg": 22.787954545454546,
+                    "max": 29.82
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.39,
+                    "avg": 6.504871794871797,
+                    "max": 13.0
+                },
+                "peerGroup": "Consumer Services",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.9090909090909092,
+                    "max": 3.0
+                },
+                "peerSocialPerformance": {
+                    "min": 6.99,
+                    "avg": 10.512307692307695,
+                    "max": 15.0
+                },
+                "percentile": 47.54,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Employee Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 14.62,
+                "tobacco": false,
+                "totalEsg": 24.67
+            }
+        }
+    },
+    {
+        "id": "SHEL.L",
+        "name": "Shell plc",
+        "allocation": 0.05073803773543787,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": true,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 18.57,
+                "esgPerformance": "OUT_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 7.0,
+                "highestControversy": 4.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 67,
+                "peerEnvironmentPerformance": {
+                    "min": 0.03,
+                    "avg": 20.606718750000002,
+                    "max": 34.09
+                },
+                "peerEsgScorePerformance": {
+                    "min": 7.32,
+                    "avg": 38.72223880597015,
+                    "max": 57.74
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.85,
+                    "avg": 8.271249999999998,
+                    "max": 16.54
+                },
+                "peerGroup": "Oil & Gas Producers",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.1194029850746268,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 1.29,
+                    "avg": 9.71890625,
+                    "max": 19.32
+                },
+                "percentile": 80.24,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Operations Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 8.11,
+                "tobacco": false,
+                "totalEsg": 33.68
+            }
+        }
+    },
+    {
+        "id": "SO",
+        "name": "The Southern Company",
+        "allocation": 0.01552484184969089,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": true,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 14.68,
+                "esgPerformance": "OUT_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 7.3,
+                "highestControversy": 2.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": true,
+                "palmOil": false,
+                "peerCount": 109,
+                "peerEnvironmentPerformance": {
+                    "min": 1.44,
+                    "avg": 11.920000000000002,
+                    "max": 25.52
+                },
+                "peerEsgScorePerformance": {
+                    "min": 9.28,
+                    "avg": 28.451651376146792,
+                    "max": 66.74
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.36,
+                    "avg": 6.156857142857144,
+                    "max": 9.45
+                },
+                "peerGroup": "Utilities",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.7798165137614679,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 2.71,
+                    "avg": 10.208952380952377,
+                    "max": 34.22
+                },
+                "percentile": 78.44,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents",
+                    "Business Ethics Incidents",
+                    "Governance Incidents",
+                    "Public Policy Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 11.0,
+                "tobacco": false,
+                "totalEsg": 32.98
+            }
+        }
+    },
+    {
+        "id": "TDG",
+        "name": "TransDigm Group Incorporated",
+        "allocation": 0.0,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 12.01,
+                "esgPerformance": "OUT_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 9.0,
+                "highestControversy": 2.0,
+                "maxAge": 86400,
+                "militaryContract": true,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 23,
+                "peerEnvironmentPerformance": {
+                    "min": 5.76,
+                    "avg": 8.221304347826086,
+                    "max": 12.01
+                },
+                "peerEsgScorePerformance": {
+                    "min": 20.37,
+                    "avg": 29.226956521739137,
+                    "max": 39.6
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.99,
+                    "avg": 6.978695652173914,
+                    "max": 9.41
+                },
+                "peerGroup": "Aerospace & Defense",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.347826086956522,
+                    "max": 4.0
+                },
+                "peerSocialPerformance": {
+                    "min": 8.68,
+                    "avg": 14.027826086956521,
+                    "max": 22.48
+                },
+                "percentile": 90.45,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 17.71,
+                "tobacco": false,
+                "totalEsg": 38.72
+            }
+        }
+    },
+    {
+        "id": "TJX",
+        "name": "The TJX Companies, Inc.",
+        "allocation": 0.01853514488505252,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 1.89,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 4.84,
+                "highestControversy": 2.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 55,
+                "peerEnvironmentPerformance": {
+                    "min": 0.08,
+                    "avg": 2.9348936170212765,
+                    "max": 7.32
+                },
+                "peerEsgScorePerformance": {
+                    "min": 9.65,
+                    "avg": 16.908909090909088,
+                    "max": 30.61
+                },
+                "peerGovernancePerformance": {
+                    "min": 2.36,
+                    "avg": 5.247872340425532,
+                    "max": 9.22
+                },
+                "peerGroup": "Retailing",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.0,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 4.0,
+                    "avg": 8.324893617021274,
+                    "max": 15.39
+                },
+                "percentile": 9.73,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Operations Incidents",
+                    "Employee Incidents",
+                    "Customer Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 7.65,
+                "tobacco": false,
+                "totalEsg": 14.38
+            }
+        }
+    },
+    {
+        "id": "TMUS",
+        "name": "T-Mobile US, Inc.",
+        "allocation": 0.008913840671550878,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 4.19,
+                "esgPerformance": "AVG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 7.07,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 67,
+                "peerEnvironmentPerformance": {
+                    "min": 1.54,
+                    "avg": 4.9101694915254255,
+                    "max": 9.67
+                },
+                "peerEsgScorePerformance": {
+                    "min": 12.77,
+                    "avg": 23.018059701492547,
+                    "max": 37.63
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.37,
+                    "avg": 6.662372881355931,
+                    "max": 8.55
+                },
+                "peerGroup": "Telecommunication Services",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.8059701492537314,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 6.43,
+                    "avg": 10.716440677966103,
+                    "max": 16.09
+                },
+                "percentile": 47.33,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Customer Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 13.38,
+                "tobacco": false,
+                "totalEsg": 24.63
+            }
+        }
+    },
+    {
+        "id": "TSLA",
+        "name": "Tesla, Inc.",
+        "allocation": 0.04309958218761204,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 3.31,
+                "esgPerformance": "AVG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 7.85,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 37,
+                "peerEnvironmentPerformance": {
+                    "min": 2.13,
+                    "avg": 6.886216216216217,
+                    "max": 12.06
+                },
+                "peerEsgScorePerformance": {
+                    "min": 12.18,
+                    "avg": 25.234324324324326,
+                    "max": 37.9
+                },
+                "peerGovernancePerformance": {
+                    "min": 5.73,
+                    "avg": 8.134054054054054,
+                    "max": 11.24
+                },
+                "peerGroup": "Automobiles",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.324324324324324,
+                    "max": 4.0
+                },
+                "peerSocialPerformance": {
+                    "min": 3.28,
+                    "avg": 10.213783783783784,
+                    "max": 17.95
+                },
+                "percentile": 49.93,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Employee Incidents",
+                    "Governance Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 14.08,
+                "tobacco": false,
+                "totalEsg": 25.23
+            }
+        }
+    },
+    {
+        "id": "TT",
+        "name": "Trane Technologies plc",
+        "allocation": 0.0,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 4.39,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 5.11,
+                "highestControversy": 2.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 15,
+                "peerEnvironmentPerformance": {
+                    "min": 4.39,
+                    "avg": 8.357333333333335,
+                    "max": 11.04
+                },
+                "peerEsgScorePerformance": {
+                    "min": 13.46,
+                    "avg": 19.62,
+                    "max": 24.24
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.69,
+                    "avg": 6.258,
+                    "max": 9.52
+                },
+                "peerGroup": "Building Products",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.2,
+                    "max": 3.0
+                },
+                "peerSocialPerformance": {
+                    "min": 2.18,
+                    "avg": 5.004666666666666,
+                    "max": 7.9
+                },
+                "percentile": 11.78,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Employee Incidents",
+                    "Society & Community Incidents",
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 5.71,
+                "tobacco": false,
+                "totalEsg": 15.2
+            }
+        }
+    },
+    {
+        "id": "UBS",
+        "name": "UBS Group AG",
+        "allocation": 0.022746334257559113,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 1.04,
+                "esgPerformance": "AVG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 14.69,
+                "highestControversy": 4.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 86,
+                "peerEnvironmentPerformance": {
+                    "min": 0.0,
+                    "avg": 1.2733333333333328,
+                    "max": 3.64
+                },
+                "peerEsgScorePerformance": {
+                    "min": 6.65,
+                    "avg": 19.73976744186046,
+                    "max": 36.92
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.39,
+                    "avg": 10.240617283950622,
+                    "max": 19.14
+                },
+                "peerGroup": "Diversified Financials",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.5,
+                    "max": 4.0
+                },
+                "peerSocialPerformance": {
+                    "min": 2.02,
+                    "avg": 8.300740740740746,
+                    "max": 14.61
+                },
+                "percentile": 61.93,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Business Ethics Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 12.48,
+                "tobacco": false,
+                "totalEsg": 28.21
+            }
+        }
+    },
+    {
+        "id": "UNP",
+        "name": "Union Pacific Corporation",
+        "allocation": 0.029283568137138078,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 7.3,
+                "esgPerformance": "AVG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 5.6,
+                "highestControversy": 2.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 47,
+                "peerEnvironmentPerformance": {
+                    "min": 3.1,
+                    "avg": 8.137111111111112,
+                    "max": 12.76
+                },
+                "peerEsgScorePerformance": {
+                    "min": 13.03,
+                    "avg": 24.094042553191493,
+                    "max": 33.96
+                },
+                "peerGovernancePerformance": {
+                    "min": 2.38,
+                    "avg": 5.575111111111111,
+                    "max": 8.34
+                },
+                "peerGroup": "Transportation",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.6808510638297873,
+                    "max": 3.0
+                },
+                "peerSocialPerformance": {
+                    "min": 3.36,
+                    "avg": 10.092222222222226,
+                    "max": 16.46
+                },
+                "percentile": 42.06,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Operations Incidents",
+                    "Employee Incidents",
+                    "Customer Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 10.55,
+                "tobacco": false,
+                "totalEsg": 23.45
+            }
+        }
+    },
+    {
+        "id": "VZ",
+        "name": "Verizon Communications Inc.",
+        "allocation": 0.008939532122913544,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 3.74,
+                "esgPerformance": "UNDER_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 5.39,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 67,
+                "peerEnvironmentPerformance": {
+                    "min": 1.54,
+                    "avg": 4.9101694915254255,
+                    "max": 9.67
+                },
+                "peerEsgScorePerformance": {
+                    "min": 12.77,
+                    "avg": 23.018059701492547,
+                    "max": 37.63
+                },
+                "peerGovernancePerformance": {
+                    "min": 3.37,
+                    "avg": 6.662372881355931,
+                    "max": 8.55
+                },
+                "peerGroup": "Telecommunication Services",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 1.8059701492537314,
+                    "max": 5.0
+                },
+                "peerSocialPerformance": {
+                    "min": 6.43,
+                    "avg": 10.716440677966103,
+                    "max": 16.09
+                },
+                "percentile": 23.13,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Operations Incidents",
+                    "Customer Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 9.59,
+                "tobacco": false,
+                "totalEsg": 18.73
+            }
+        }
+    },
+    {
+        "id": "WMT",
+        "name": "Walmart Inc.",
+        "allocation": 0.006858962873923456,
+        "esg_index": {
+            "esgScores": {
+                "adult": false,
+                "alcoholic": false,
+                "animalTesting": false,
+                "catholic": false,
+                "coal": false,
+                "controversialWeapons": false,
+                "environmentPercentile": null,
+                "environmentScore": 5.86,
+                "esgPerformance": "AVG_PERF",
+                "furLeather": false,
+                "gambling": false,
+                "gmo": false,
+                "governancePercentile": null,
+                "governanceScore": 7.05,
+                "highestControversy": 3.0,
+                "maxAge": 86400,
+                "militaryContract": false,
+                "nuclear": false,
+                "palmOil": false,
+                "peerCount": 33,
+                "peerEnvironmentPerformance": {
+                    "min": 1.79,
+                    "avg": 6.487187500000002,
+                    "max": 10.14
+                },
+                "peerEsgScorePerformance": {
+                    "min": 14.11,
+                    "avg": 22.41757575757576,
+                    "max": 28.53
+                },
+                "peerGovernancePerformance": {
+                    "min": 4.08,
+                    "avg": 5.907812500000001,
+                    "max": 7.57
+                },
+                "peerGroup": "Food Retailers",
+                "peerHighestControversyPerformance": {
+                    "min": 0.0,
+                    "avg": 2.212121212121212,
+                    "max": 3.0
+                },
+                "peerSocialPerformance": {
+                    "min": 5.64,
+                    "avg": 9.920625000000001,
+                    "max": 15.61
+                },
+                "percentile": 50.05,
+                "pesticides": false,
+                "ratingMonth": 9,
+                "ratingYear": 2023,
+                "relatedControversy": [
+                    "Employee Incidents",
+                    "Social Supply Chain Incidents",
+                    "Customer Incidents"
+                ],
+                "smallArms": false,
+                "socialPercentile": null,
+                "socialScore": 12.36,
+                "tobacco": false,
+                "totalEsg": 25.26
+            }
+        }
+    }
+]

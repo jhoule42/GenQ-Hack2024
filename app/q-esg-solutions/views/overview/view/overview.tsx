@@ -59,7 +59,7 @@ export default function OverViewPage() {
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold tracking-tight">
-            Welcome Back Q-Impact User 👋
+            Welcome Q-Impact User 👋
           </h2>
         </div>
 

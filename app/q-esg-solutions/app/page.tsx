@@ -10,7 +10,6 @@ const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World)
   ssr: false,
 });
 
-
 const Home = () => {
   const globeConfig = {
     pointSize: 4,
@@ -34,6 +33,7 @@ const Home = () => {
     autoRotate: true,
     autoRotateSpeed: 0.5,
   };
+
   const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
   const sampleArcs = [
     {
@@ -401,7 +401,7 @@ const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <header className="mb-8">
-        <h1 className="text-4xl font-bold">Q-Impact</h1>
+        <h1 className="text-6xl font-extrabold">Q-Impact</h1>
       </header>
       <main className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-black bg-white relative w-full">
         <div>
@@ -432,7 +432,7 @@ const Home = () => {
                 <World data={sampleArcs} globeConfig={globeConfig} />
               </div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col py-4">
               <Button
                 className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white"
                 asChild
@@ -445,6 +445,84 @@ const Home = () => {
         </div>
       </main>
     </div>
+    // <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-green-100 to-blue-200 relative">
+    //   <header className="mb-8">
+    //     <h1 className="text-6xl font-extrabold text-green-900">Q-Impact</h1>
+    //   </header>
+
+    //   {/* Main content with environmental theme */}
+    //   <main className="flex flex-row items-center justify-center py-20 h-screen md:h-auto relative w-full">
+    //     <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
+
+    //       {/* Trees on the sides */}
+    //       <motion.div
+    //         className="absolute left-4 bottom-0 h-48 w-20 bg-green-600 rounded-full shadow-lg"
+    //         initial={{ opacity: 0, scale: 0.8 }}
+    //         animate={{ opacity: 1, scale: 1 }}
+    //         transition={{ duration: 1.5 }}
+    //       >
+    //         <motion.div
+    //           className="bg-green-400 h-16 w-16 rounded-full absolute top-2 left-2"
+    //           initial={{ y: 20 }}
+    //           animate={{ y: 0 }}
+    //           transition={{ delay: 0.3, duration: 0.8 }}
+    //         />
+    //       </motion.div>
+
+    //       <motion.div
+    //         className="absolute right-4 bottom-0 h-48 w-20 bg-green-600 rounded-full shadow-lg"
+    //         initial={{ opacity: 0, scale: 0.8 }}
+    //         animate={{ opacity: 1, scale: 1 }}
+    //         transition={{ duration: 1.5 }}
+    //       >
+    //         <motion.div
+    //           className="bg-green-400 h-16 w-16 rounded-full absolute top-2 left-2"
+    //           initial={{ y: 20 }}
+    //           animate={{ y: 0 }}
+    //           transition={{ delay: 0.3, duration: 0.8 }}
+    //         />
+    //       </motion.div>
+
+    //       <motion.div
+    //         initial={{
+    //           opacity: 0,
+    //           y: 20,
+    //         }}
+    //         animate={{
+    //           opacity: 1,
+    //           y: 0,
+    //         }}
+    //         transition={{
+    //           duration: 1,
+    //         }}
+    //         className="div"
+    //       >
+    //         <h2 className="text-center text-xl md:text-4xl font-bold text-green-900">
+    //           Empowering Sustainable Investments with Quantum Precision
+    //         </h2>
+    //         <p className="text-center text-base md:text-lg font-normal text-green-700 max-w-md mt-2 mx-auto">
+    //           ESG Portfolio Management leveraging Quantum-Approximate-Optimization-Algorithms.
+    //         </p>
+    //       </motion.div>
+
+    //       <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
+    //       <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
+    //         <World data={sampleArcs} globeConfig={globeConfig} />
+    //       </div>
+
+    //       <div className="flex flex-col py-4">
+    //         <Button
+    //           className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-green-800 via-green-600 to-green-400"
+    //           asChild
+    //         >
+    //           <Link href="/dashboard">
+    //             <Cover>Launch</Cover>
+    //           </Link>
+    //         </Button>
+    //       </div>
+    //     </div>
+    //   </main>
+    // </div>
   );
 };
 

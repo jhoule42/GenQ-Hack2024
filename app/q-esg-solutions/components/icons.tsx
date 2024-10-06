@@ -26,6 +26,7 @@ import {
     Settings,
     SunMedium,
     Trash,
+    TreeDeciduous,
     Twitter,
     User,
     UserCircle2Icon,
@@ -64,6 +65,7 @@ import {
     help: HelpCircle,
     pizza: Pizza,
     sun: SunMedium,
+    tree: TreeDeciduous,
     moon: Moon,
     laptop: Laptop,
     gitHub: ({ ...props }: LucideProps) => (

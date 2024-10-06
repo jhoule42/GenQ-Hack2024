@@ -1,11 +1,17 @@
+'use client'
+
+import { useEffect, useState } from 'react';
+import { csvParse } from 'd3-dsv';
 import { AreaGraph } from '../area-graph';
 import { BarGraph } from '../bar-graph';
 import { PieGraph } from '../pie-graph';
+import { LineGraph } from '../line-chart-graph';
 import { CalendarDateRangePicker } from '@/components/date-range-picker';
 import PageContainer from '@/components/layout/page-container';
 import { Button } from '@/components/ui/button';
 import { Slider } from "@/components/ui/slider";
-import { Input } from "@/components/ui/input"
+import { Input } from "@/components/ui/input";
+// import spy_dt from '@/public/s';
 import {
   Card,
   CardContent,
@@ -16,7 +22,206 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { TreeGraph } from '../tree-map-graph';
 
+interface StockData {
+  id: string;
+  name: string;
+  allocation: number;
+  esg_index: {
+    animalTesting: boolean;
+    coal: boolean;
+    furLeather: boolean;
+    gmo: boolean;
+    palmOil: boolean;
+    nuclear: boolean;
+    pesticides: boolean;
+  },
+  esg_score: number,
+}
+
+const mockStocks: StockData[] = [
+  {
+    id: '1',
+    name: 'EcoFriendly Corp',
+    allocation: 40,
+    esg_index: {
+      animalTesting: false,
+      coal: false,
+      furLeather: false,
+      gmo: true,
+      palmOil: true,
+      nuclear: false,
+      pesticides: false,
+    },
+    esg_score: 85,
+  },
+  {
+    id: '2',
+    name: 'Green Energy Inc',
+    allocation: 30,
+    esg_index: {
+      animalTesting: false,
+      coal: false,
+      furLeather: false,
+      gmo: false,
+      palmOil: false,
+      nuclear: true,
+      pesticides: false,
+    },
+    esg_score: 90,
+  },
+  {
+    id: '3',
+    name: 'Sustainable Foods Ltd',
+    allocation: 20,
+    esg_index: {
+      animalTesting: false,
+      coal: false,
+      furLeather: true,
+      gmo: false,
+      palmOil: true,
+      nuclear: false,
+      pesticides: true,
+    },
+    esg_score: 70,
+  },
+  {
+    id: '4',
+    name: 'Toxic Waste Solutions',
+    allocation: 10,
+    esg_index: {
+      animalTesting: true,
+      coal: true,
+      furLeather: true,
+      gmo: true,
+      palmOil: true,
+      nuclear: false,
+      pesticides: true,
+    },
+    esg_score: 30,
+  },
+  {
+    id: '5',
+    name: 'Recycled Plastics Co',
+    allocation: 25,
+    esg_index: {
+      animalTesting: false,
+      coal: false,
+      furLeather: false,
+      gmo: false,
+      palmOil: false,
+      nuclear: true,
+      pesticides: false,
+    },
+    esg_score: 75,
+  },
+  {
+    id: '6',
+    name: 'Clean Water Technologies',
+    allocation: 15,
+    esg_index: {
+      animalTesting: false,
+      coal: false,
+      furLeather: false,
+      gmo: false,
+      palmOil: false,
+      nuclear: false,
+      pesticides: false,
+    },
+    esg_score: 95,
+  },
+  {
+    id: '7',
+    name: 'Animal Welfare Alliance',
+    allocation: 35,
+    esg_index: {
+      animalTesting: false,
+      coal: false,
+      furLeather: false,
+      gmo: false,
+      palmOil: false,
+      nuclear: false,
+      pesticides: false,
+    },
+    esg_score: 100,
+  },
+  {
+    id: '8',
+    name: 'High Carbon Footprint Ltd',
+    allocation: 5,
+    esg_index: {
+      animalTesting: true,
+      coal: true,
+      furLeather: true,
+      gmo: true,
+      palmOil: true,
+      nuclear: true,
+      pesticides: true,
+    },
+    esg_score: 10,
+  },
+];
+
+const parseCSV = (csvString: string) => {
+  const data = csvParse(csvString);
+  return data.map((row: any) => ({
+    date: new Date(row['Date']),
+    open: +row['Open'],
+    high: +row['High'],
+    low: +row['Low'],
+    close: +row['Close'],
+    volume: +row['Volume'],
+    dividends: +row['Dividends'],
+    splits: +row['Stock Splits'],
+    capitalGains: +row['Capital Gains'],
+    normalized: +row['Normalized'],
+  }));
+};
+
 export default function ResultsPage() {
+  const [predictedImpact, setPredictedImpact] = useState<string[]>([]);
+  const [dataSPY, setDataSPY] = useState<any[]>([]);
+  const [dataMSCI, setDataMSCI] = useState<any[]>([]);
+
+  // useEffect(() => {
+  //   const loadCSVData = async () => {
+  //     const SPYResponse = spy_dt; 
+  //     const MSCIResponse = await fetch('../../../MSCI_social.csv');
+      
+  //     const SPYText = await spy_dt.text();
+  //     const MSCIText = await MSCIResponse.text();
+
+  //     const parsedSPY = parseCSV(SPYText);
+  //     const parsedMSCI = parseCSV(MSCIText);
+
+  //     setDataSPY(parsedSPY);
+  //     setDataMSCI(parsedMSCI);
+  //   };
+
+  //   loadCSVData();
+  // }, []);
+
+  useEffect(() => {
+    const fetchPredictedImpact = async () => {
+      const response = await fetch('/api/cohere', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ stocks: mockStocks }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setPredictedImpact(data.texts);
+      } else {
+        console.error('Failed to fetch predicted impact:', response.statusText);
+      }
+    };
+
+    fetchPredictedImpact();
+  }, []);
+
+
   return (
     <PageContainer scrollable={true}>
       <div className="space-y-2">
@@ -29,16 +234,16 @@ export default function ResultsPage() {
             <Button>Download</Button>
           </div>
         </div>
-        <Tabs defaultValue="overview" className="space-y-4">
+        <Tabs defaultValue="current" className="space-y-4">
           <TabsList>
-            <TabsTrigger value="overview">
+            <TabsTrigger value="current">
               Current
             </TabsTrigger>
-            <TabsTrigger value="analytics" disabled>
+            <TabsTrigger value="historical">
               Historical
             </TabsTrigger>
           </TabsList>
-          <TabsContent value="overview" className="space-y-4">
+          <TabsContent value="current" className="space-y-4">
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -72,17 +277,19 @@ export default function ResultsPage() {
                   </CardTitle>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="h-4 w-4 text-muted-foreground"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="lucide lucide-tree-deciduous"
+                  //className="h-4 w-4 text-muted-foreground"
                   >
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                    <path d="M8 19a4 4 0 0 1-2.24-7.32A3.5 3.5 0 0 1 9 6.03V6a3 3 0 1 1 6 0v.04a3.5 3.5 0 0 1 3.24 5.65A4 4 0 0 1 16 19Z" />
+                    <path d="M12 19v3" />
                   </svg>
                 </CardHeader>
                 <CardContent>
@@ -112,38 +319,46 @@ export default function ResultsPage() {
                   </svg>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">+573</div>
-                  <p className="text-xs text-muted-foreground">
-                    +201 since last hour
-                  </p>
+                  {predictedImpact.length > 0 ? (
+                    <ul className="list-disc pl-5">
+                      {predictedImpact.map((impact, index) => (
+                        <li key={index} className="text-sm text-muted-foreground">{impact}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-sm text-muted-foreground">Loading predicted impacts...</p>
+                  )}
                 </CardContent>
               </Card>
             </div>
             <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">
-                    Predicted Environmental Impact
-                  </CardTitle>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="h-4 w-4 text-muted-foreground"
-                  >
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                  </svg>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">+573</div>
-                  <p className="text-xs text-muted-foreground">
-                    +201 since last hour
-                  </p>
-                </CardContent>
-              </Card>
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-sm font-medium">
+                  Predicted Environmental Impact
+                </CardTitle>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="lucide lucide-vegan"
+                >
+                  <path d="M2 2a26.6 26.6 0 0 1 10 20c.9-6.82 1.5-9.5 4-14" />
+                  <path d="M16 8c4 0 6-2 6-6-4 0-6 2-6 6" /><path d="M17.41 3.6a10 10 0 1 0 3 3" />
+                </svg>
+              </CardHeader>
+              <CardContent>
+                <div className="text-2xl font-bold">+573</div>
+                <p className="text-xs text-muted-foreground">
+                  COHERE GENERATED CUASE AND EFFECTS
+                </p>
+              </CardContent>
+            </Card>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7">
               <div className="col-span-4">
                 <BarGraph />
@@ -156,6 +371,13 @@ export default function ResultsPage() {
               </div>
               <div className="col-span-4 md:col-span-3">
                 <PieGraph />
+              </div>
+            </div>
+          </TabsContent>
+          <TabsContent value="historical" className="space-y-4">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7">
+              <div className="col-span-4">
+                <LineGraph dataSPY={dataSPY} dataMSCI={dataMSCI} />
               </div>
             </div>
           </TabsContent>
