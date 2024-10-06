@@ -43,7 +43,7 @@ export default function OverViewPage() {
     setTimeout(() => {
       setLoading(false);
       router.push('/dashboard/results');
-    }, 5000); // Adjust the delay as per your need
+    }, 5000);
   };
 
   if (loading) {

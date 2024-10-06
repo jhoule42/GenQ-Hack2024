@@ -216,9 +216,9 @@ export function TreeGraph() {
     return (
         <Card>
             <CardHeader>
-                <CardTitle>Tree Map - Stacked</CardTitle>
+                <CardTitle>Optimized Portfolio Tree Map</CardTitle>
                 <CardDescription>
-                    Showing total visitors for the last 6 months
+                    Showing allocated funds with respect to GICS stock standards
                 </CardDescription>
             </CardHeader>
             <CardContent>
@@ -226,10 +226,10 @@ export function TreeGraph() {
                     config={chartConfig}
                     className="aspect-auto h-[310px] w-full"
                 >
-                    {/* <ResponsiveContainer width="100%" height="100%">
-                        <Treemap width={400} height={200} data={chartData} dataKey="size" aspectRatio={4 / 3} stroke="#fff" fill="#8884d8" />
-                    </ResponsiveContainer> */}
                     <ResponsiveContainer width="100%" height="100%">
+                        <Treemap width={400} height={200} data={chartData} dataKey="size" aspectRatio={4 / 3} stroke="#fff" fill="#8884d8" />
+                    </ResponsiveContainer>
+                    {/* <ResponsiveContainer width="100%" height="100%">
                         <Treemap
                             width={400}
                             height={200}
@@ -239,7 +239,7 @@ export function TreeGraph() {
                             fill="#8884d8"
                             content={<CustomizedContent colors={COLORS} />}
                         />
-                    </ResponsiveContainer>
+                    </ResponsiveContainer> */}
                 </ChartContainer>
             </CardContent>
             <CardFooter>

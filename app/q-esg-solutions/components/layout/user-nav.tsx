@@ -19,7 +19,7 @@ export function UserNav() {
     user: {
       name: 'John Doe',
       email: 'john.doe@example.com',
-      image: 'https://via.placeholder.com/150', // Placeholder image URL
+      image: 'https://via.placeholder.com/150',
     },
   };
   if (session) {
